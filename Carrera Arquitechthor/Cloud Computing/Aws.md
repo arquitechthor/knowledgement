@@ -16,4 +16,4 @@ Lambda
 
 API Gateway
 
-[Enlaces](AWS/Enlaces%20a48f0dcd1b714c409b03647426946241.md)
+[Enlaces](AWS/Enlaces.md)

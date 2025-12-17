@@ -6,8 +6,8 @@
 
 [¿Qué es un contenedor?](Dockers/%C2%BFQu%C3%A9%20es%20un%20contenedor%206e375e5fb3a94fff876261d7c36b6066.md)
 
-[Descarga](Dockers/Descarga%203e78cff96c3e49948fbfb58396173b4b.md)
+[Descarga](Dockers/Descarga.md)
 
-[Arquitectura Docker](Dockers/Arquitectura%20Docker%207c9cd614af8343f78cf56b7a08417fba.md)
+[Arquitectura Docker](Dockers/Arquitectura%20docker.md)
 
-[Comandos](Dockers/Comandos%202d32841f322e4e0f88be48157a494925.md)
+[Comandos](Dockers/Comandos.md)

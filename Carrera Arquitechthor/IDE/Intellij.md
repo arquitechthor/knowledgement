@@ -4,4 +4,4 @@
 
 **sout +** ↩️ Impresión por pantalla.
 
-[Plugins](IntelliJ/Plugins%201bc3bf68bb0680b397dbcd6677833e56.md)
+[Plugins](IntelliJ/Plugins.md)

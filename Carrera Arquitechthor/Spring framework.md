@@ -8,11 +8,11 @@ Spring MVC
 
 Spring Data JPA
 
-[Cache](Spring%20Framework/Cache%201c83bf68bb0680369c3bf68b1e1a34aa.md)
+[Cache](Spring%20Framework/Cache.md)
 
 Spring Security
 
-[Spring AI](Spring%20Framework/Spring%20AI%205a549402c81d482a9cc1392c5a471ecf.md)
+[Spring AI](Spring%20Framework/Spring%20ai.md)
 
 Preguntas
 

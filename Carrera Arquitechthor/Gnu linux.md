@@ -16,4 +16,4 @@
 14. Permisos
 15. Tuberias
 
-[Lista de comandos interesantes](GNU%20Linux/Lista%20de%20comandos%20interesantes%20049bd725e6d14049828d5d972b285b67.md)
+[Lista de comandos interesantes](GNU%20Linux/Lista%20de%20comandos%20interesantes.md)
