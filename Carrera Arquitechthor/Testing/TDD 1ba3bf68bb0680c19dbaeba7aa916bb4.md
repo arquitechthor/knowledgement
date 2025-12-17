@@ -1,0 +1,3 @@
+# TDD
+
+Test-Driven Development (TDD) es una técnica de desarrollo de software que se enfoca en escribir **pruebas automatizadas** antes de escribir el código de producción. Esto permite verificar que el código cumple con los requisitos establecidos y evita que se introduzcan errores inadvertidos. Al utilizar TDD, los desarrolladores pueden mejorar la **calidad** del código, **acelerar** el proceso de **desarrollo**, **reducir** el número de **errores** y mejorar el mantenimiento del software a largo plazo.

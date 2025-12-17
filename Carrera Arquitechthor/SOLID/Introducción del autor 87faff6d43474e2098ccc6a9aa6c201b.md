@@ -1,0 +1,16 @@
+# Introducción del autor
+
+| Good software systems begin with clean code. On the one hand, if the bricks aren’t well made, the architecture of the building doesn’t matter much. On the other hand, you can make a substantial mess with well-made bricks. This is where the SOLID principles come in. | Los buenos sistemas de software comienzan con un código limpio. Por un lado, si los ladrillos no están bien hechos, la arquitectura del edificio no importa mucho. Por otro lado, puedes causar un gran desastre con ladrillos bien hechos. Aquí es donde entran los principios SOLID. |
+| --- | --- |
+| The SOLID principles tell us how to arrange our functions and data structures into classes, and how those classes should be interconnected. The use of the word “class” does not imply that these principles are applicable only to object-oriented software. A class is simply a coupled grouping of functions and data. Every software system has such groupings, whether they are called classes or not. The SOLID principles apply to those groupings. | Los principios SOLID nos dicen cómo organizar nuestras funciones y estructuras de datos en clases, y cómo esas clases deben interconectarse. El uso de la palabra "clase" no implica que estos principios sean aplicables únicamente al software orientado a objetos. Una clase es simplemente una agrupación acoplada de funciones y datos. Cada sistema de software tiene tales agrupaciones, ya sea que se llamen clases o no. Los principios SOLID se aplican a esas agrupaciones. |
+| The goal of the principles is the creation of mid-level software structures that:
+• Tolerate change,
+• Are easy to understand, and
+• Are the basis of components that can be used in many software systems.
+ | El objetivo de los principios es la creación de estructuras de software de nivel medio que:
+• ssea torante a cambios,
+• Sean fáciles de entender y
+• Sean la base de componentes que se pueden utilizar en muchos sistemas de software. |
+| The term “mid-level” refers to the fact that these principles are applied by programmers working at the module level. They are applied just above the level of the code and help to define the kinds of software structures used within modules and components. | El término "nivel medio" se refiere al hecho de que estos principios los aplican los programadores que trabajan a nivel de módulo. Se aplican justo encima del nivel del código y ayudan a definir los tipos de estructuras de software utilizadas dentro de los módulos y componentes. |
+| Just as it is possible to create a substantial mess with well-made bricks, so it is also possible to create a system-wide mess with well-designed mid-level components. For this reason, once we have covered the SOLID principles, we will move on to their counterparts in the component world, and then to the principles of high-level architecture. | Así como es posible crear un desorden sustancial con ladrillos bien hechos, también es posible crear un desorden en todo el sistema con componentes de nivel medio bien diseñados. Por esta razón, una vez que hayamos cubierto los principios SOLID, pasaremos a sus contrapartes en el mundo de los componentes y luego a los principios de la arquitectura de alto nivel. |
+|  |  |
