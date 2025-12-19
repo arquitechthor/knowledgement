@@ -20,7 +20,7 @@
 
 [Log Center](Microservices%20with%20Spring%20Cloud/Log%20center.md)
 
-[API Gateway (Edge Service)](Microservices%20with%20Spring%20Cloud/API%20Gateway%20(Edge%20Service)%205390875232664576be487e92ae487807.md)
+[API Gateway (Edge Service)](Microservices%20with%20Spring%20Cloud/Api%20gateway%20edge%20service.md)
 
 [Circuit Breaker](Microservices%20with%20Spring%20Cloud/Circuit%20breaker.md)
 

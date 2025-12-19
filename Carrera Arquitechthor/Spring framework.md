@@ -16,4 +16,4 @@ Spring Security
 
 Preguntas
 
-[¿Qué es el ámbito de un bean?](Spring%20Framework/%C2%BFQu%C3%A9%20es%20el%20%C3%A1mbito%20de%20un%20bean%2034a28c8e395845d98ac785aaaeb41099.md)
+[¿Qué es el ámbito de un bean?](Spring%20Framework/Qué%20es%20el%20ámbito%20de%20un%20bean.md)

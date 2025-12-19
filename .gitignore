@@ -1,0 +1,31 @@
+# Scripts temporales de mantenimiento
+fix_links.py
+rename_docs.py
+cleanup_links.py
+verify_repository.py
+
+# Reportes de verificación (se regeneran automáticamente)
+verification_report.md
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
