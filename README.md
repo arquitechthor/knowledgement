@@ -1,6 +1,6 @@
 # Temas de Estudio Arquitechthor
 
-![Untitled](Carrera%20Arquitechthor/Untitled.png)
+Este repositorio contiene algunas guías de estudio y documentación de temas en tecnología (desarrollo y arquitectura), que me han parecido relevantes y no he querido perder. Estaís invitados a participar.
 
 # Level 1 - Base Skills
 
