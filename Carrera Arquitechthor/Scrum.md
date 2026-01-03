@@ -29,13 +29,9 @@
 # Herramientas complementarias
 
 - Historia de usuario
-
-[Stakeholder](Scrum/Stakeholder.md)
-
-[Kanban](Scrum/Kanban.md)
-
-[Team Agreements](Scrum/Team%20agreements.md)
-
+- [Stakeholder](Scrum/Stakeholder.md)
+- [Kanban](Scrum/Kanban.md)
+- [Team Agreements](Scrum/Team%20agreements.md)
 - Burndown Chart
 - Frontera de Roles
 - Implementación en organigrama
