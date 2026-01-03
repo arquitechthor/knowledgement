@@ -1,16 +1,18 @@
 # Temas de Estudio Arquitechthor
 
-Este repositorio contiene algunas guías de estudio y documentación de temas en tecnología (desarrollo y arquitectura), que me han parecido relevantes y no he querido perder. Estaís invitados a participar.
+Este repositorio contiene algunas guías de estudio y documentación de temas en tecnología (desarrollo de software y arquitectura), que me han parecido relevantes y no he querido perder. Estaís invitados a participar.
 
-# Level 1 - Base Skills
+# Level 0 - Extra Skills
 
-[Scrum](Carrera%20Arquitechthor/Scrum.md)
+Estas habilidades son transversales, pero me parecen importantes para un desarrollador/arquitecto
 
-[English](Carrera%20Arquitechthor/English.md)
+- [Scrum](Carrera%20Arquitechthor/Scrum.md)
 
-[GNU/Linux](Carrera%20Arquitechthor/Gnu%20linux.md)
+- [English](Carrera%20Arquitechthor/English.md)
 
-# Level 2 - Fundamentos
+- [GNU/Linux](Carrera%20Arquitechthor/Gnu%20linux.md)
+
+# Level 1 - Fundamentos
 
 [IDE](Carrera%20Arquitechthor/Ide.md)
 
@@ -22,7 +24,7 @@ Este repositorio contiene algunas guías de estudio y documentación de temas en
 
 [Bases de Datos](Carrera%20Arquitechthor/Bases%20de%20datos.md)
 
-# Level 3 - Programación
+# Level 2 - Programación
 
 [Frontend](Carrera%20Arquitechthor/Frontend.md)
 
@@ -38,7 +40,7 @@ Este repositorio contiene algunas guías de estudio y documentación de temas en
 
 [gRPC](Carrera%20Arquitechthor/Grpc.md)
 
-# Level 4 - Ingeniería de Software
+# Level 3 - Ingeniería de Software
 
 [Clean Code](Carrera%20Arquitechthor/Clean%20code.md)
 
@@ -48,7 +50,7 @@ Este repositorio contiene algunas guías de estudio y documentación de temas en
 
 [Complejidad](Carrera%20Arquitechthor/Complejidad.md)
 
-# Level 5 - Arquitectura / Devops
+# Level 4 - Arquitectura / Devops
 
 [CD/CI](Carrera%20Arquitechthor/Cd%20ci.md)
 
@@ -62,7 +64,7 @@ Este repositorio contiene algunas guías de estudio y documentación de temas en
 
 [DevOps](Carrera%20Arquitechthor/Devops.md)
 
-# Level 6 - Cloud
+# Level 5 - Cloud
 
 [Cloud Computing](Carrera%20Arquitechthor/Cloud%20computing.md)
 
