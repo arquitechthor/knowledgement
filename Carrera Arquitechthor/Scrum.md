@@ -21,13 +21,9 @@
 - Sprint Backlog
 - Sprint
 - [Daily Meeting](Scrum/Daily%20meeting.md)
-
 - Incremento
-
-[Sprint Review](Scrum/Sprint%20review.md)
-
-[Retrospectiva](Scrum/Retrospectiva.md)
-
+- [Sprint Review](Scrum/Sprint%20review.md)
+- [Retrospectiva](Scrum/Retrospectiva.md)
 - Proceso General Scrum
 
 # Herramientas complementarias
