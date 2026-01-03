@@ -15,8 +15,7 @@
 - [Product Owner](Scrum/Product%20owner.md)
 - Product Backlog
 - [Development Team](Scrum/Development%20team.md)
-
-[Scrum Team](Scrum/Scrum%20team.md)
+- [Scrum Team](Scrum/Scrum%20team.md)
 
 [Scrum Master](Scrum/Scrum%20master.md)
 
