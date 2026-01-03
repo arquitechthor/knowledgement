@@ -9,9 +9,7 @@
 # ¿Cómo aplicar Scrum?
 
 - [¿Qué es Scrum y para qué sirve?](Scrum/Qué%20es%20scrum%20y%20para%20qué%20sirve.md)
-
 - [Valores de Scrum](Scrum/Valores%20de%20scrum.md)
-
 - ¿Cómo comenzar con Scrum?
 
 [Términos básicos y los 11 elementos fundamentales](Scrum/Términos%20básicos%20y%20los%2011%20elementos%20fundamentales.md)
