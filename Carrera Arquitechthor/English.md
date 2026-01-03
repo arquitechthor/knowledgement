@@ -10,11 +10,9 @@
 
 *Additional Info*
 
-[Programming Vocabulary](English/Programming%20vocabulary.md)
-
-[How to keep studying while traveling?](English/How%20to%20keep%20studying%20while%20traveling.md)
-
-[Lecciones en Youtube](English/Lecciones%20en%20youtube.md)
+- [Programming Vocabulary](English/Programming%20vocabulary.md)
+- [How to keep studying while traveling?](English/How%20to%20keep%20studying%20while%20traveling.md)
+- [Lecciones en Youtube](English/Lecciones%20en%20youtube.md)
 
 *Exercises*
 
