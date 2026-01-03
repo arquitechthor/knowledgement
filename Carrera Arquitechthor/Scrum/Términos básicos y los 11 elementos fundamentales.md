@@ -28,6 +28,6 @@ Las ceremonias son eventos que se deben realizar a lo largo de ciclos de tiempo.
 - [**Sprint Planning**](Sprint%20planning.md).
 - [**Daily Scrum / Daily Meeting**](Daily%20meeting.md).
 - [**Sprint Review**](Sprint%20review.md).
-- [**Sprint Retrospective**](Sprint%20retrospective.md).
+- [**Sprint Retrospective**](Retrospectiva.md).
 
 Manejamos los términos en inglés (algunos sin traducir), de algunos de los términos básicos y los 11 elementos fundamentales para mantener un estándar respecto a la bibliografía y porque algunos de esos conceptos son usados indiferentemente en inglés o español como es el caso de "Scrum Master". También podría considerarse un cuarto rol de importancia que es el [**Stakeholder**](Stakeholder.md), que mencionaremos en el módulo tres aunque no forme parte del núcleo del Equipo Scrum. A lo largo de este material veremos otras herramientas, artefactos y ceremonias que complementan en gran medida la práctica de Scrum.
