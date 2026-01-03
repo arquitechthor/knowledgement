@@ -25,31 +25,30 @@ software tanto por nuestra propia experiencia como
 ayudando a terceros. A través de este trabajo hemos
 aprendido a valorar:*
 
-**Individuos e interacciones** sobre **procesos y herramientas**
-**Software funcionando** sobre **documentación extensiva**
-**Colaboración con el cliente** sobre **negociación contractual**
-**Respuesta ante el cambio** sobre **seguir un plan**
+- **Individuos e interacciones** sobre **procesos y herramientas**
+- **Software funcionando** sobre **documentación extensiva**
+- **Colaboración con el cliente** sobre **negociación contractual**
+- **Respuesta ante el cambio** sobre **seguir un plan**
 
-Esto es, aunque valoramos los elementos de la **derecha**,
-valoramos más los de la **izquierda**.
+Esto es, aunque valoramos los elementos de la **derecha**, valoramos más los de la **izquierda**.
 
-Kent Beck
-Mike Beedle
-Arie van Bennekum
-Alistair Cockburn
-Ward Cunningham
-Martin Fowler
-James Grenning
-Jim Highsmith
-Andrew Hunt
-Ron Jeffries
-Jon Kern
-Brian Marick
-Robert C. Martin
-Steve Mellor
-Ken Schwaber
-Jeff Sutherland
-Dave Thomas
+- Kent Beck
+- Mike Beedle
+- Arie van Bennekum
+- Alistair Cockburn
+- Ward Cunningham
+- Martin Fowler
+- James Grenning
+- Jim Highsmith
+- Andrew Hunt
+- Ron Jeffries
+- Jon Kern
+- Brian Marick
+- Robert C. Martin
+- Steve Mellor
+- Ken Schwaber
+- Jeff Sutherland
+- Dave Thomas
 
 Ver: [[Texto oficial](https://agilemanifesto.org/iso/es/manifesto.html)]
 
