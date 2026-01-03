@@ -1,6 +1,6 @@
 # Stakeholder
 
-Una especie de Rol adicional que veremos en este material de [Scrum](Scrum/Qué%20es%20scrum%20y%20para%20qué%20sirve.md) es **El Stakeholder**. La persona o personas interesadas en el producto que vamos a llevar a cabo.
+Una especie de Rol adicional que veremos en este material de Scrum es **El Stakeholder**. La persona o personas interesadas en el producto que vamos a llevar a cabo.
 
 Stakeholder es una palabra del inglés que, en el ámbito empresarial, significa ‘interesado’ o ‘parte interesada’, y que se refiere a todas aquellas personas, grupo u organizaciones afectadas o interesadas en el proyecto que estamos llevando a cabo. No es un rol oficial de Scrum, pero queremos hacerle mención porque usualmente podrían desempeñar papeles importantes dentro del desarrollo de un proyecto.
 
