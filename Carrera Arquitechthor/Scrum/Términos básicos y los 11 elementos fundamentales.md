@@ -1,6 +1,6 @@
 # Términos básicos y los 11 elementos fundamentales
 
-Para conocer a profundidad los detalles de [**Scrum](Scrum/Qué%20es%20scrum%20y%20para%20qué%20sirve.md)** es necesario definir tres términos o conceptos básicos: **rol**, **artefacto** y **ceremonia**, ya que, los 11 elementos fundamentales de Scrum que veremos en las siguientes lecciones, se categorizan dentro de alguno de esos tres conceptos.
+Para conocer a profundidad los detalles de **[Scrum](Qué%20es%20scrum%20y%20para%20qué%20sirve.md)** es necesario definir tres términos o conceptos básicos: **rol**, **artefacto** y **ceremonia**, ya que, los 11 elementos fundamentales de Scrum que veremos en las siguientes lecciones, se categorizan dentro de alguno de esos tres conceptos.
 
 ### Roles
 
