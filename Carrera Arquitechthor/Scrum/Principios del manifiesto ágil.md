@@ -1,6 +1,6 @@
 # Principios del Manifiesto Ágil
 
-En la lección anterior vimos cuatro postulados del [Manifiesto Ágil](Manifiesto%20Ágil.md) que resumen las prácticas ágiles en gran medida. Ahora veremos 12 principios del mismo Manifiesto Ágil que profundizan en el compromiso de las personas que van a realizar un proyecto bajo una metodología ágil.
+En la lección anterior vimos cuatro postulados del [Manifiesto Ágil](El%20manifiesto%20ágil.md) que resumen las prácticas ágiles en gran medida. Ahora veremos 12 principios del mismo Manifiesto Ágil que profundizan en el compromiso de las personas que van a realizar un proyecto bajo una metodología ágil.
 
 ### Principios del Manifiesto Ágil
 
