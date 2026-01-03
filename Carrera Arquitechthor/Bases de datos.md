@@ -15,7 +15,7 @@
 
 **No relacionales**
 
-Por series de tiempo
+*Por series de tiempo*
 
 Grafos
 
