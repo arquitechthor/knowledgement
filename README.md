@@ -30,13 +30,10 @@ Estas habilidades son transversales, pero me parecen importantes para un desarro
 
 # Level 3 - Ingeniería de Software
 
-[Clean Code](Carrera%20Arquitechthor/Clean%20code.md)
-
-[SOLID](Carrera%20Arquitechthor/Solid.md)
-
-[Design Patterns](Carrera%20Arquitechthor/Design%20patterns.md)
-
-[Complejidad](Carrera%20Arquitechthor/Complejidad.md)
+- [Clean Code](Carrera%20Arquitechthor/Clean%20code.md)
+- [SOLID](Carrera%20Arquitechthor/Solid.md)
+- [Design Patterns](Carrera%20Arquitechthor/Design%20patterns.md)
+- [Complejidad](Carrera%20Arquitechthor/Complejidad.md)
 
 # Level 4 - Arquitectura / Devops
 
