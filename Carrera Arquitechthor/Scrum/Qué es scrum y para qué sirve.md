@@ -2,15 +2,11 @@
 
 En términos sencillos **Scrum es un Marco de Trabajo (*Framework*)**, es decir, es un modo de trabajar que te ayuda a realizar procesos ágiles, sistematizados, humanos, intuitivos, eficientes y muy productivos. A diferencia de la creencia popular **Scrum no es una metodología ágil**, un proceso, una técnica o método definitivo, por lo que se puede emplear varios procesos, herramientas y técnicas. Scrum consta en esencia de un equipo auto-organizado con roles claramente definidos, eventos, artefactos y reglas asociadas. Cada componente dentro del marco de trabajo sirve a un propósito específico y es esencial para el éxito de Scrum y para su uso. Las reglas de Scrum relacionan los roles, eventos y artefactos y rigen las relaciones e interacciones entre ellos. Scrum es útil en muchos tipos de proyectos, no sólo al software, en especial en los que parten de ideas poco claras, yo le llamo a esto: Ideas Gelatinosas.
 
-![Ahora eres capaz de entender el chiste :)](https://xigmad.net/academy/wp-content/uploads/2020/06/humor-300x292.jpg)
-
-Ahora eres capaz de entender el chiste :)
-
 ### Scrum Técnico
 
 Scrum Técnico es el conjunto de reglas y ceremonias que conforman las prácticas "convencionales" de Scrum. Si estás comenzando con Scrum debes comenzar practicando al pie de la letra **Scrum Técnico**. Evita las "tropicalizaciones" (hacerlo a tu modo), las tropicalizaciones sin conocimiento y sin fundamento pueden enviar tu intento de aplicación de la agilidad directo al fracaso.
 
-Cuando ya tengas todas las prácticas básicas dominadas, es hora de aplicar **Scrum Avanzado**. Este curso abarca Scrum Técnico por completo, conocimiento que te dará la base para aprobar cualquier certificación básica de Scrum.
+Cuando ya tengas todas las prácticas básicas dominadas, es hora de aplicar **Scrum Avanzado**. Este material abarca Scrum Técnico por completo, conocimiento que te dará la base para aprobar cualquier certificación básica de Scrum.
 
 ### Scrum avanzado
 
@@ -18,7 +14,7 @@ Scrum avanzado es el conjunto de estrategias, técnicas y herramientas que mejor
 
 ### Esencia de Scrum
 
-Es importante tener siempre en cuenta [las lecciones anteriores](https://xigmad.net/academy/curso/agilidad-con-scrum/), ya que, son la base para la práctica correcta de Scrum. Si eres desarrollador o miembro del equipo esos temas te ayudarán a detectar cuando el trabajo está dejando de ser un proceso ágil. Si eres empresario, gerente o empleador, te ayuda a entender que debes cambiar dentro de la organización y su cultura (incluyéndote), para adoptar prácticas ágiles.
+Es importante tener siempre en cuenta el concepto de [agilidad](Scrum/Qué%20es%20agilidad.md), ya que, es la base para la práctica correcta de Scrum. Si eres desarrollador o miembro del equipo esos temas te ayudarán a detectar cuando el trabajo está dejando de ser un proceso ágil. Si eres empresario, gerente o empleador, te ayuda a entender que debes cambiar dentro de la organización y su cultura (incluyéndote), para adoptar prácticas ágiles.
 
 ### Origen
 
@@ -48,4 +44,4 @@ También cinco valores fundamentales
 - Apertura.
 - Respeto.
 
-Estos aspectos humanos son parte del cambio o adecuación interno que necesitamos realizar **antes** de comenzar las prácticas de Scrum Técnico. Aunque a lo largo del curso haré referencia a Scrum dentro del ámbito del desarrollo de software, recuerda que Scrum sirve para mucho más que eso, es un modo de trabajo que se aplica a cualquier tipo de proyecto.
+Estos aspectos humanos son parte del cambio o adecuación interno que necesitamos realizar **antes** de comenzar las prácticas de Scrum Técnico. Aunque a lo largo de este material haré referencia a Scrum dentro del ámbito del desarrollo de software, recuerda que Scrum sirve para mucho más que eso, es un modo de trabajo que se aplica a cualquier tipo de proyecto.

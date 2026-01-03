@@ -1,6 +1,6 @@
 # Principios del Manifiesto Ágil
 
-En la lección anterior vimos cuatro postulados del [Manifiesto Ágil](https://xigmad.net/academy/curso/agilidad-con-scrum/lecciones/el-manifiesto-agil/) que resumen las prácticas ágiles en gran medida. Ahora veremos 12 principios del mismo Manifiesto Ágil que profundizan en el compromiso de las personas que van a realizar un proyecto bajo una metodología ágil.
+En la lección anterior vimos cuatro postulados del [Manifiesto Ágil](Manifiesto%20Ágil.md) que resumen las prácticas ágiles en gran medida. Ahora veremos 12 principios del mismo Manifiesto Ágil que profundizan en el compromiso de las personas que van a realizar un proyecto bajo una metodología ágil.
 
 ### Principios del Manifiesto Ágil
 
@@ -27,9 +27,9 @@ Este punto es parte del ganar ganar de los proyectos ágiles. Tener a los respon
 
 Aquí quiero dejar una anécdota personal como ejemplo de la importancia de este punto.
 
-Una vez, desempeñaba un rol de liderazgo dentro de la metodología ([*Scrum Master*](https://xigmad.net/academy/lessons/rol-scrum-master/)) en una importante empresa. El tiempo previsto para el proyecto era bastante ajustados y las características del proyecto dificultaban muchísimo tener software con valor intermedio. Las semanas pasaban y a pesar de tener avances evidentes algunos responsables del negocio externos al proyecto dudaban de los avances ya que, tenían en la mente el principio anterior. Pasaron semanas y el equipo no tenía algo funcional que mostrar, debía hacerse mucho trabajo de desarrollo previo para mostrar una sola pantalla.
+Una vez, desempeñaba un rol de liderazgo dentro de la metodología ([*Scrum Master*](Scrum%20Master.md)) en una importante empresa. El tiempo previsto para el proyecto era bastante ajustados y las características del proyecto dificultaban muchísimo tener software con valor intermedio. Las semanas pasaban y a pesar de tener avances evidentes algunos responsables del negocio externos al proyecto dudaban de los avances ya que, tenían en la mente el principio anterior. Pasaron semanas y el equipo no tenía algo funcional que mostrar, debía hacerse mucho trabajo de desarrollo previo para mostrar una sola pantalla.
 
-Afortunadamente dentro del equipo estaba una persona de negocios que estaba comprometida y trabajaba con nosotros casi a diario, fue esa persona la que dio la cara por el equipo ante las personas de negocio que no estaban involucrados en el proyecto. El proyecto estuvo listo en el tiempo pautado, pero la moraleja no es el cumplimiento del tiempo, es que, cuando tienes en el equipo al cliente o a los responsables del negocio, te eliminas la necesidad de dar explicaciones o que te pregunten ¿Qué pasó? Lo que pasa en el proyecto es transparente a [diario](https://xigmad.net/academy/lessons/ceremonia-daily-meeting/).
+Afortunadamente dentro del equipo estaba una persona de negocios que estaba comprometida y trabajaba con nosotros casi a diario, fue esa persona la que dio la cara por el equipo ante las personas de negocio que no estaban involucrados en el proyecto. El proyecto estuvo listo en el tiempo pautado, pero la moraleja no es el cumplimiento del tiempo, es que, cuando tienes en el equipo al cliente o a los responsables del negocio, te eliminas la necesidad de dar explicaciones o que te pregunten ¿Qué pasó? Lo que pasa en el proyecto es transparente a [diario](Daily%20meeting.md).
 
 ### Los proyectos se desarrollan en torno a individuos motivados. Hay que darles el entorno y el apoyo que necesitan, y confiarles la ejecución del trabajo.
 
@@ -51,7 +51,7 @@ Usualmente los "empresaurios" se escudan en la frase "es que tiene que quedar la
 
 ### Los procesos Ágiles promueven el desarrollo sostenible. Los promotores, desarrolladores y usuarios debemos ser capaces de mantener un ritmo constante de forma indefinida.
 
-Uno de las cosas interesantes de un proyecto ágil es la posibilidad de adaptarse a proyectos indefinidos en el tiempo. Por ejemplo, un taller mecánico puede usar un proceso ágil para atender continuamente la reparación de vehículos. O una unidad de Aseguramiento de la Calidad (QA) puede usar herramientas ágiles como [Kanban](https://xigmad.net/academy/curso/agilidad-con-scrum/lecciones/herramienta-kanban/) para atender de manera continua el trabajo de pruebas de software.
+Uno de las cosas interesantes de un proyecto ágil es la posibilidad de adaptarse a proyectos indefinidos en el tiempo. Por ejemplo, un taller mecánico puede usar un proceso ágil para atender continuamente la reparación de vehículos. O una unidad de Aseguramiento de la Calidad (QA) puede usar herramientas ágiles como [Kanban](Kanban.md) para atender de manera continua el trabajo de pruebas de software.
 
 ### La atención continua a la excelencia técnica y al buen diseño mejora la Agilidad.
 

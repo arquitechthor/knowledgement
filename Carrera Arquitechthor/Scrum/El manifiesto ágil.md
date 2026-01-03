@@ -71,7 +71,7 @@ Los individuos (las personas), son los encargados de la realización del product
 
 **¿Scrum y la agilidad aplica sólo para el desarrollo de Software?**
 
-No, en este curso veremos que puedes aplicar Agilidad con Scrum hasta en tus actividades domésticas o para las tareas de tus hijos.
+No, en este material veremos que puedes aplicar Agilidad con Scrum hasta en tus actividades domésticas o para las tareas de tus hijos.
 
 ### Colaboración con el cliente sobre negociación contractual
 
