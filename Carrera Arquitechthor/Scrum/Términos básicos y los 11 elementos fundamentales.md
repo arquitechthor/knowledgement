@@ -6,7 +6,7 @@ Para conocer a profundidad los detalles de **[Scrum](Qué%20es%20scrum%20y%20par
 
 Sabemos que la [agilidad](Qué%20es%20agilidad.md) la ejecutan los Individuos, cada uno de estos individuos tendrán asignaciones específicas. Las asignaciones que ejecutarán se engloban dentro de un rol predefinido desde el principio del proyecto.
 
-No se recomienda ejercer más de un rol simultáneamente. También veremos que cada rol exige un conjunto de habilidades humanas y preparación para ser ejercido. Existen dentro del [Scrum Team](Scrum%20Team.md) (equipo Scrum) tres roles.
+No se recomienda ejercer más de un rol simultáneamente. También veremos que cada rol exige un conjunto de habilidades humanas y preparación para ser ejercido. Existen dentro del [Scrum Team](Scrum%20team.md) (equipo Scrum) tres roles.
 
 - [**Product Owner**](Product%20Owner.md): Dueño del producto.
 - [**Team / Development Team**](Development%20Team.md): Equipo Scrum.
