@@ -1,18 +1,15 @@
 # Bases de Datos
 
-ACID
-
-Normalización
+- ACID
+- Normalización
 
 ## Tipos de Bases de Datos
 
 **Relacionales**
 
-[MySQL](Bases%20de%20Datos/Mysql.md)
-
-[Oracle](Bases%20de%20Datos/Oracle.md)
-
-[Postgres](Bases%20de%20Datos/Postgres.md)
+- [MySQL](Bases%20de%20Datos/Mysql.md)
+- [Oracle](Bases%20de%20Datos/Oracle.md)
+- [Postgres](Bases%20de%20Datos/Postgres.md)
 
 **Columnares**
 
@@ -23,13 +20,10 @@ Por series de tiempo
 Grafos
 
 Documentales
-
-[MongoDB](Bases%20de%20Datos/Mongodb.md)
+- [MongoDB](Bases%20de%20Datos/Mongodb.md)
 
 Clave valor
-
-[Redis](Bases%20de%20Datos/Redis.md)
+- [Redis](Bases%20de%20Datos/Redis.md)
 
 In Memory
-
-[H2](Bases%20de%20Datos/H2.md)
+- [H2](Bases%20de%20Datos/H2.md)
