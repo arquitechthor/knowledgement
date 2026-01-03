@@ -46,17 +46,12 @@ Estas habilidades son transversales, pero me parecen importantes para un desarro
 
 # Level 4 - Arquitectura / Devops
 
-[CD/CI](Carrera%20Arquitechthor/Cd%20ci.md)
-
-[Arquitectura](Carrera%20Arquitechthor/Arquitectura.md)
-
-[Dockers](Carrera%20Arquitechthor/Dockers.md)
-
-[Kubernetes](Carrera%20Arquitechthor/Kubernetes.md)
-
-[Monitoring](Carrera%20Arquitechthor/Monitoring.md)
-
-[DevOps](Carrera%20Arquitechthor/Devops.md)
+- [CD/CI](Carrera%20Arquitechthor/Cd%20ci.md)
+- [Arquitectura](Carrera%20Arquitechthor/Arquitectura.md)
+- [Dockers](Carrera%20Arquitechthor/Dockers.md)
+- [Kubernetes](Carrera%20Arquitechthor/Kubernetes.md)
+- [Monitoring](Carrera%20Arquitechthor/Monitoring.md)
+- [DevOps](Carrera%20Arquitechthor/Devops.md)
 
 # Level 5 - Cloud
 
