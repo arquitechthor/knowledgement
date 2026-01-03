@@ -8,8 +8,8 @@ Sabemos que la [agilidad](Qué%20es%20agilidad.md) la ejecutan los Individuos, c
 
 No se recomienda ejercer más de un rol simultáneamente. También veremos que cada rol exige un conjunto de habilidades humanas y preparación para ser ejercido. Existen dentro del [Scrum Team](Scrum%20team.md) (equipo Scrum) tres roles.
 
-- [**Product Owner**](Product%20Owner.md): Dueño del producto.
-- [**Team / Development Team**](Development%20Team.md): Equipo Scrum.
+- [**Product Owner**](Product%20owner.md): Dueño del producto.
+- [**Team / Development Team**](Development%20team.md): Equipo Scrum.
 - [**Scrum Master**](Scrum%20master.md).
 
 ### Artefactos
