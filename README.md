@@ -12,15 +12,11 @@ Estas habilidades son transversales, pero me parecen importantes para un desarro
 
 # Level 1 - Fundamentos
 
-[IDE](Carrera%20Arquitechthor/Ide.md)
-
-[Conceptos básicos de programación](Carrera%20Arquitechthor/Conceptos%20básicos%20de%20programación.md)
-
-[Principios de Programación](Carrera%20Arquitechthor/Principios%20de%20programación.md)
-
-[Versioning](Carrera%20Arquitechthor/Versioning.md)
-
-[Bases de Datos](Carrera%20Arquitechthor/Bases%20de%20datos.md)
+- [IDE](Carrera%20Arquitechthor/Ide.md)
+- [Conceptos básicos de programación](Carrera%20Arquitechthor/Conceptos%20básicos%20de%20programación.md)
+- [Principios de Programación](Carrera%20Arquitechthor/Principios%20de%20programación.md)
+- [Versioning](Carrera%20Arquitechthor/Versioning.md)
+- [Bases de Datos](Carrera%20Arquitechthor/Bases%20de%20datos.md)
 
 # Level 2 - Programación
 
