@@ -16,11 +16,11 @@
 
 *Exercises*
 
-[Music to enjoy](English/Music%20to%20enjoy.md)
+- [Music to enjoy](English/Music%20to%20enjoy.md)
 
 *Tareas*
 
-[Past Perfect (expo)](English/Past%20perfect%20expo.md)
+- [Past Perfect (expo)](English/Past%20perfect%20expo.md)
 
 *Links*
 
@@ -30,7 +30,3 @@
 - [YouGlish](https://es.youglish.com/).
 - [101 Historias](https://helenadailyenglish.com/101-short-stories-for-learning-english-beginner-to-advanced-level-text-audio-and-video).
 - [Inglés para perezosos](https://www.inglesparaperezosos.com/).
-
-*Academies*
-
-[Alpha Learning](English/Alpha%20learning.md)
