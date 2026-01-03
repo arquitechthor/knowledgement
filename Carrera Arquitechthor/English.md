@@ -2,15 +2,11 @@
 
 *Grammar*
 
-[Articles A & An](English/Articles%20a%20and%20an.md)
-
-[Conditionals](English/Conditionals.md)
-
-[Present Perfect](English/Present%20perfect.md)
-
-[Past Perfect](English/Past%20perfect.md)
-
-[Reported Speech](English/Reported%20speech.md)
+- [Articles A & An](English/Articles%20a%20and%20an.md)
+- [Conditionals](English/Conditionals.md)
+- [Present Perfect](English/Present%20perfect.md)
+- [Past Perfect](English/Past%20perfect.md)
+- [Reported Speech](English/Reported%20speech.md)
 
 *Additional Info*
 
