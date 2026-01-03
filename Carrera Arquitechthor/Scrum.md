@@ -14,8 +14,7 @@
 - [Términos básicos y los 11 elementos fundamentales](Scrum/Términos%20básicos%20y%20los%2011%20elementos%20fundamentales.md)
 - [Product Owner](Scrum/Product%20owner.md)
 - Product Backlog
-
-[Development Team](Scrum/Development%20team.md)
+- [Development Team](Scrum/Development%20team.md)
 
 [Scrum Team](Scrum/Scrum%20team.md)
 
