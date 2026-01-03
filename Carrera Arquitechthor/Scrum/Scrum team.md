@@ -1,6 +1,6 @@
 # Scrum Team
 
-**El Scrum Team** es el conjunto de personas que participan en un proyecto aplicando [Scrum](Scrum.md). Los participantes de Scrum pueden tener uno de tres roles: [Product Owner](Product%20owner.md), [Scrum Master](Scrum%20master.md) o [Development Team](Development%20team.md).
+**El Scrum Team** es el conjunto de personas que participan en un proyecto aplicando Scrum. Los participantes de Scrum pueden tener uno de tres roles: [Product Owner](Product%20owner.md), [Scrum Master](Scrum%20master.md) o [Development Team](Development%20team.md).
 
 El equipo Scrum es **autoorganizado** y **multifuncional**.
 
