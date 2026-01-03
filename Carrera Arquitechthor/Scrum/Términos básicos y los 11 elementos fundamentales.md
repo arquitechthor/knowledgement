@@ -26,7 +26,7 @@ Las ceremonias son eventos que se deben realizar a lo largo de ciclos de tiempo.
 
 - [**Sprint**](Sprint.md).
 - [**Sprint Planning**](Sprint%20planning.md).
-- [**Daily Scrum / Daily Meeting**](Daily%20scrum.md).
+- [**Daily Scrum / Daily Meeting**](Daily%20meeting.md).
 - [**Sprint Review**](Sprint%20review.md).
 - [**Sprint Retrospective**](Sprint%20retrospective.md).
 
