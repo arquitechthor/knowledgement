@@ -20,19 +20,13 @@ Estas habilidades son transversales, pero me parecen importantes para un desarro
 
 # Level 2 - Programación
 
-[Frontend](Carrera%20Arquitechthor/Frontend.md)
-
-[Java](Carrera%20Arquitechthor/Java.md)
-
-[Testing](Carrera%20Arquitechthor/Testing.md)
-
-[Spring Framework](Carrera%20Arquitechthor/Spring%20framework.md)
-
-[Queues](Carrera%20Arquitechthor/Queues.md)
-
-[Rest API](Carrera%20Arquitechthor/Rest%20api.md)
-
-[gRPC](Carrera%20Arquitechthor/Grpc.md)
+- [Frontend](Carrera%20Arquitechthor/Frontend.md)
+- [Java](Carrera%20Arquitechthor/Java.md)
+- [Testing](Carrera%20Arquitechthor/Testing.md)
+- [Spring Framework](Carrera%20Arquitechthor/Spring%20framework.md)
+- [Queues](Carrera%20Arquitechthor/Queues.md)
+- [Rest API](Carrera%20Arquitechthor/Rest%20api.md)
+- [gRPC](Carrera%20Arquitechthor/Grpc.md)
 
 # Level 3 - Ingeniería de Software
 
