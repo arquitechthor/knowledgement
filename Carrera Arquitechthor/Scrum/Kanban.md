@@ -1,19 +1,17 @@
 # Kanban
 
-![](https://xigmad.net/academy/wp-content/uploads/2020/09/kanban-300x300.png)
-
 En esta lección te mostraré **Kanban**, que usualmente es una metodología aparte, como herramienta para gestionar tareas en Scrum.
 
 Probablemente hayas visto el tablero de la imagen en alguno de nuestros videos. Te explico brevemente como funciona:
 
 La idea con Kanban es **organizar** una lista de tareas para su ejecución.
 
-Para lograr esto el primer paso es recopilar todas las tareas a desarrollar en un [Sprint](https://xigmad.net/academy/lessons/ceremonia-el-sprint/), de tal modo que una vez realizadas todas las tareas el trabajo pueda considerarse concluido el Sprint.
+Para lograr esto el primer paso es recopilar todas las tareas a desarrollar en un [Sprint](Sprint.md), de tal modo que una vez realizadas todas las tareas el trabajo pueda considerarse concluido el Sprint.
 
 El segundo paso es hacer una pizarra y dividirla en tres sectores:
 
 - En el primer sector colocaremos todas las tareas por realizar.
-- En el segundo sector de la pizarra tendremos todas las tareas que están en ejecución en ese momento. Esto es muy útil para mantener el [foco](https://xigmad.net/academy/lessons/valores-de-scrum/), ya que, no deberías estar haciendo múltiples tareas a la vez por persona, eso desmejora muchísimo la [agilidad](https://xigmad.net/academy/lessons/que-es-agilidad/). También sirve para visualizar el trabajo que está llevando a cabo los [compañeros de equipo](https://xigmad.net/academy/lessons/rol-el-development-team/).
+- En el segundo sector de la pizarra tendremos todas las tareas que están en ejecución en ese momento. Esto es muy útil para mantener el [foco](Focus.md), ya que, no deberías estar haciendo múltiples tareas a la vez por persona, eso desmejora muchísimo la [agilidad](Agility.md). También sirve para visualizar el trabajo que está llevando a cabo los [compañeros de equipo](Development%20team.md).
 - En el tercer sector colocaremos el trabajo realizado. El propósito es que todas las tareas estén allí, porque eso marca el final del Sprint.
 
 No es necesario limitarse a tres sectores, sin embargo te recomiendo mantener lo más sencilla posible la pizarra.

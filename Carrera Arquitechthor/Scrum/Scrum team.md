@@ -1,6 +1,6 @@
 # Scrum Team
 
-**El Scrum Team** es el conjunto de personas que participan en un proyecto aplicando [Scrum](https://xigmad.net/academy/lessons/que-es-scrum-y-para-que-sirve/). Los participantes de Scrum pueden tener uno de tres roles: [Product Owner](https://xigmad.net/academy/lessons/rol-el-product-owner/), [Scrum Master](https://xigmad.net/academy/lessons/rol-scrum-master/) o [Development Team](https://xigmad.net/academy/lessons/rol-el-development-team/).
+**El Scrum Team** es el conjunto de personas que participan en un proyecto aplicando [Scrum](Scrum.md). Los participantes de Scrum pueden tener uno de tres roles: [Product Owner](Product%20owner.md), [Scrum Master](Scrum%20master.md) o [Development Team](Development%20team.md).
 
 El equipo Scrum es **autoorganizado** y **multifuncional**.
 

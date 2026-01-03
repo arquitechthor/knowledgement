@@ -6,7 +6,7 @@ El **Daily Meeting** o **Daily Scrum** o **Stand-up Meeting** es una breve reuni
 - El que tiene previsto realizar.
 - Cosas que puede necesitar, o impedimentos que deben eliminarse para poder realizar el trabajo.
 
-Cada persona actualiza el [Sprint Backlog](https://xigmad.net/academy/lessons/artefacto-sprint-backlog/) el tiempo o esfuerzo pendiente de sus tareas, y con esta información se actualiza a su vez el gráfico con el que el equipo monitoriza el avance del [Sprint](https://xigmad.net/academy/lessons/ceremonia-el-sprint/) que puede ser [el Burndown Chart](https://xigmad.net/academy/lessons/herramienta-burndown-chart/) o el [Kanban](https://xigmad.net/academy/lessons/kanban-como-herramienta-para-scrum/).
+Cada persona actualiza el [Sprint Backlog](Sprint%20backlog.md) el tiempo o esfuerzo pendiente de sus tareas, y con esta información se actualiza a su vez el gráfico con el que el equipo monitoriza el avance del [Sprint](Sprint.md) que puede ser [el Burndown Chart](Burndown%20chart.md) o el [Kanban](Kanban.md).
 
 La reunión debe ser breve, de **no más de 15 minutos**, en la que el equipo sincroniza el trabajo y establece el plan para las 24 horas siguientes.
 
@@ -16,9 +16,9 @@ Formato de la reunión
 
 Se recomienda realizarla de pie junto a los artefactos de avance del sprint, para que todos puedan compartir la información y anotar.
 
-En la reunión está presente todo el [equipo](https://xigmad.net/academy/lessons/rol-el-development-team/), y pueden asistir también otras personas relacionadas con el proyecto o la organización, aunque éstas **no pueden intervenir**.
+En la reunión está presente todo el [equipo](Development%20team.md), y pueden asistir también otras personas relacionadas con el proyecto o la organización, aunque éstas **no pueden intervenir**.
 
-En esta reunión cada miembro del equipo de desarrollo explica: Lo que ha logrado desde el anterior scrum diario. Lo que va ha hacer hasta el próximo scrum diario. Si están teniendo algún problema, o si prevé que puede encontrar algún impedimento. Y actualiza en el [Sprint Backlog](https://xigmad.net/academy/lessons/artefacto-sprint-backlog/) el esfurezo que estima pendiente en las tareas que tiene asignadas, o marca como finalizadas las ya completadas.
+En esta reunión cada miembro del equipo de desarrollo explica: Lo que ha logrado desde el anterior scrum diario. Lo que va ha hacer hasta el próximo scrum diario. Si están teniendo algún problema, o si prevé que puede encontrar algún impedimento. Y actualiza en el [Sprint Backlog](Sprint%20backlog.md) el esfurezo que estima pendiente en las tareas que tiene asignadas, o marca como finalizadas las ya completadas.
 
 Al final de la reunión, el equipo refresca el gráfico de avance del sprint, con las estimaciones actualizadas, El Scrum Master realiza las gestiones adecuadas para resolver las necesidades o impedimentos identificados. **El equipo es el responsable de esta reunión, no el Scrum Master**; y no se trata de una reunión de “inspección” o “control” sino de comunicación entre el equipo para compartir el estado del trabajo, chequear el ritmo de avance y colaborar en posibles dificultades o impedimentos.
 

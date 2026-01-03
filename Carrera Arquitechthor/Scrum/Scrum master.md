@@ -1,13 +1,13 @@
 # Scrum Master
 
-El **Scrum Master** es un rol de Scrum. Es el responsable del cumplimiento de las reglas de un marco de [Scrum Técnico](https://xigmad.net/academy/lessons/que-es-scrum-y-para-que-sirve/), asegurando que se entienden en la organización, y se trabaja conforme a ellas. Los Scrum Masters hacen esto ayudando a todos a entender la teoría, prácticas, reglas y valores de Scrum.
+El **Scrum Master** es un rol de Scrum. Es el responsable del cumplimiento de las reglas de un marco de [Scrum Técnico](Scrum%20technical.md), asegurando que se entienden en la organización, y se trabaja conforme a ellas. Los Scrum Masters hacen esto ayudando a todos a entender la teoría, prácticas, reglas y valores de Scrum.
 
-El **Scrum Master** es un líder que está al servicio del [Equipo Scrum](https://xigmad.net/academy/lessons/el-scrum-team/), ayuda a las personas externas al Equipo Scrum a entender qué interacciones con el Equipo Scrum pueden ser útiles y cuáles no, ayuda a todos a modificar estas interacciones para maximizar el valor creado por el Equipo Scrum. En otras palabras, evita que personas externas ocasiones distracciones dentro del equipo
+El **Scrum Master** es un líder que está al servicio del [Equipo Scrum](Development%20team.md), ayuda a las personas externas al Equipo Scrum a entender qué interacciones con el Equipo Scrum pueden ser útiles y cuáles no, ayuda a todos a modificar estas interacciones para maximizar el valor creado por el Equipo Scrum. En otras palabras, evita que personas externas ocasiones distracciones dentro del equipo
 
 ### El Servicio del Scrum Master al Dueño de Producto
 
 - Asegurar que los objetivos, el alcance y el dominio del producto sean entendidos por todos en el equipo Scrum de la mejor manera posible.
-- Encontrar técnicas para gestionar la [Product Backlog](https://xigmad.net/academy/lessons/artefacto-product-backlog/) de manera efectiva.
+- Encontrar técnicas para gestionar la [Product Backlog](Product%20backlog.md) de manera efectiva.
 - Ayudar al Equipo Scrum a entender la necesidad de contar con elementos del Product Backlog claros y concisos.
 - Entender la planificación del producto en un entorno empírico.
 - Asegurar que el Dueño de Producto conozca cómo ordenar el Product Backlog para maximizar el valor.

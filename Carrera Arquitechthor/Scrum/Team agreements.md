@@ -4,13 +4,13 @@ En esta lección aprenderemos una herramienta que puedes aplicar incluso fuera d
 
 La comunicación es esencial al momento de realizar cualquier trabajo en equipo a fin de mantener un ambiente de sano. Los acuerdos del equipo o Team Agreements es una pizarra en la cual los participantes escribirán los acuerdos de convivencia y trabajo que son necesarios establecer desde el principio del proyecto.
 
-Esto no quiere decir que no se puedan modificar, al contrario, es probable que, en las dinámicas de [retrospectiva](https://xigmad.net/academy/lessons/ceremonia-5-de-5-retrospective/), los acuerdos se vean modificados para optimizar la comunicación y la convivencia de los participantes. Se recomienda siempre dar una revisión a los acuerdos en cada retrospectiva.
+Esto no quiere decir que no se puedan modificar, al contrario, es probable que, en las dinámicas de [retrospectiva](Retrospective.md), los acuerdos se vean modificados para optimizar la comunicación y la convivencia de los participantes. Se recomienda siempre dar una revisión a los acuerdos en cada retrospectiva.
 
 ### Algunos acuerdos comunes
 
-- Duración del [Sprint](https://xigmad.net/academy/lessons/ceremonia-2-de-5-sprint/).
+- Duración del [Sprint](Sprint.md).
 - Horario de trabajo.
-- Fechas, Hora y duración de ceremonias ([Sprint Planning](https://xigmad.net/academy/lessons/ceremonia-1-de-5-spring-planning/), [Daily Meeting](https://xigmad.net/academy/lessons/ceremonia-3-de-5-daily-meeting/), [Review](https://xigmad.net/academy/lessons/ceremonia-4-de-5-sprint-review/), Retrospectiva).
+- Fechas, Hora y duración de ceremonias ([Sprint Planning](Sprint%20planning.md), [Daily Meeting](Daily%20meeting.md), [Review](Sprint%20review.md), Retrospectiva).
 - Eventos fuera del trabajo que pueden afectar al equipo ("Cristina estará ausente entre los días 4SEP al 19OCT", "Pablo tiene clases todos los miércoles en la mañana").
 - Software para la gestión digital del trabajo (Libre Office, Jira, Trello).
 - Herramientas de comunicación (Zoom, Whatsapp, correo electrónico).
