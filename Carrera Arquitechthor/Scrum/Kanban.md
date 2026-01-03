@@ -11,7 +11,7 @@ Para lograr esto el primer paso es recopilar todas las tareas a desarrollar en u
 El segundo paso es hacer una pizarra y dividirla en tres sectores:
 
 - En el primer sector colocaremos todas las tareas por realizar.
-- En el segundo sector de la pizarra tendremos todas las tareas que están en ejecución en ese momento. Esto es muy útil para mantener el foco, ya que, no deberías estar haciendo múltiples tareas a la vez por persona, eso desmejora muchísimo la [agilidad](Agility.md). También sirve para visualizar el trabajo que está llevando a cabo los [compañeros de equipo](Development%20team.md).
+- En el segundo sector de la pizarra tendremos todas las tareas que están en ejecución en ese momento. Esto es muy útil para mantener el foco, ya que, no deberías estar haciendo múltiples tareas a la vez por persona, eso desmejora muchísimo la agilidad. También sirve para visualizar el trabajo que está llevando a cabo los [compañeros de equipo](Development%20team.md).
 - En el tercer sector colocaremos el trabajo realizado. El propósito es que todas las tareas estén allí, porque eso marca el final del Sprint.
 
 No es necesario limitarse a tres sectores, sin embargo te recomiendo mantener lo más sencilla posible la pizarra.
