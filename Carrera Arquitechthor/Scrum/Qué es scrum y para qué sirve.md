@@ -14,7 +14,7 @@ Scrum avanzado es el conjunto de estrategias, técnicas y herramientas que mejor
 
 ### Esencia de Scrum
 
-Es importante tener siempre en cuenta el concepto de [agilidad](Scrum/Qué%20es%20agilidad.md), ya que, es la base para la práctica correcta de Scrum. Si eres desarrollador o miembro del equipo esos temas te ayudarán a detectar cuando el trabajo está dejando de ser un proceso ágil. Si eres empresario, gerente o empleador, te ayuda a entender que debes cambiar dentro de la organización y su cultura (incluyéndote), para adoptar prácticas ágiles.
+Es importante tener siempre en cuenta el concepto de [agilidad](Qué%20es%20agilidad.md), ya que, es la base para la práctica correcta de Scrum. Si eres desarrollador o miembro del equipo esos temas te ayudarán a detectar cuando el trabajo está dejando de ser un proceso ágil. Si eres empresario, gerente o empleador, te ayuda a entender que debes cambiar dentro de la organización y su cultura (incluyéndote), para adoptar prácticas ágiles.
 
 ### Origen
 
