@@ -7,9 +7,7 @@ Este repositorio contiene algunas guías de estudio y documentación de temas en
 Estas habilidades son transversales, pero me parecen importantes para un desarrollador/arquitecto
 
 - [Scrum](Carrera%20Arquitechthor/Scrum.md)
-
 - [English](Carrera%20Arquitechthor/English.md)
-
 - [GNU/Linux](Carrera%20Arquitechthor/Gnu%20linux.md)
 
 # Level 1 - Fundamentos
