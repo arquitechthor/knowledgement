@@ -17,13 +17,10 @@
 - [Development Team](Scrum/Development%20team.md)
 - [Scrum Team](Scrum/Scrum%20team.md)
 - [Scrum Master](Scrum/Scrum%20master.md)
-
-[Sprint Planning](Scrum/Sprint%20planning.md)
-
+- [Sprint Planning](Scrum/Sprint%20planning.md)
 - Sprint Backlog
 - Sprint
-
-[Daily Meeting](Scrum/Daily%20meeting.md)
+- [Daily Meeting](Scrum/Daily%20meeting.md)
 
 - Incremento
 
