@@ -1,6 +1,6 @@
 # Design Patterns
 
-[Strategy](Design%20Patterns/Strategy.md)
+- [Strategy](Design%20Patterns/Strategy.md)
 
 Enlaces
 
