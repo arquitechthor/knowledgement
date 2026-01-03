@@ -60,12 +60,10 @@ Estas habilidades son transversales, pero me parecen importantes para un desarro
 
 # Level 5 - Cloud
 
-[Cloud Computing](Carrera%20Arquitechthor/Cloud%20computing.md)
-
-[Microservices with Spring Cloud](Carrera%20Arquitechthor/Microservices%20with%20spring%20cloud.md)
+- [Cloud Computing](Carrera%20Arquitechthor/Cloud%20computing.md)
+- [Microservices with Spring Cloud](Carrera%20Arquitechthor/Microservices%20with%20spring%20cloud.md)
 
 *Otros temas*
 
-[Enlaces](Carrera%20Arquitechthor/Enlaces.md)
-
-[Next to study](Carrera%20Arquitechthor/Next%20to%20study.md)
+- [Enlaces](Carrera%20Arquitechthor/Enlaces.md)
+- [Next to study](Carrera%20Arquitechthor/Next%20to%20study.md)
