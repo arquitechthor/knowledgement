@@ -4,7 +4,7 @@ En esta lección aprenderemos una herramienta que puedes aplicar incluso fuera d
 
 La comunicación es esencial al momento de realizar cualquier trabajo en equipo a fin de mantener un ambiente de sano. Los acuerdos del equipo o Team Agreements es una pizarra en la cual los participantes escribirán los acuerdos de convivencia y trabajo que son necesarios establecer desde el principio del proyecto.
 
-Esto no quiere decir que no se puedan modificar, al contrario, es probable que, en las dinámicas de [retrospectiva](Retrospective.md), los acuerdos se vean modificados para optimizar la comunicación y la convivencia de los participantes. Se recomienda siempre dar una revisión a los acuerdos en cada retrospectiva.
+Esto no quiere decir que no se puedan modificar, al contrario, es probable que, en las dinámicas de [retrospectiva](Retrospectiva.md), los acuerdos se vean modificados para optimizar la comunicación y la convivencia de los participantes. Se recomienda siempre dar una revisión a los acuerdos en cada retrospectiva.
 
 ### Algunos acuerdos comunes
 
