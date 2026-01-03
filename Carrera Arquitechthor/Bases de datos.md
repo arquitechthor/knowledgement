@@ -17,13 +17,13 @@
 
 *Por series de tiempo*
 
-Grafos
+*Grafos*
 
-Documentales
+*Documentales*
 - [MongoDB](Bases%20de%20Datos/Mongodb.md)
 
-Clave valor
+*Clave valor*
 - [Redis](Bases%20de%20Datos/Redis.md)
 
-In Memory
+*In Memory*
 - [H2](Bases%20de%20Datos/H2.md)
