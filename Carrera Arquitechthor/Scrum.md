@@ -2,11 +2,9 @@
 
 # Principios de agilidad
 
-[¿Qué es agilidad?](Scrum/Qué%20es%20agilidad.md)
-
-[El Manifiesto Ágil](Scrum/El%20manifiesto%20ágil.md)
-
-[Principios del Manifiesto Ágil](Scrum/Principios%20del%20manifiesto%20ágil.md)
+- [¿Qué es agilidad?](Scrum/Qué%20es%20agilidad.md)
+- [El Manifiesto Ágil](Scrum/El%20manifiesto%20ágil.md)
+- [Principios del Manifiesto Ágil](Scrum/Principios%20del%20manifiesto%20ágil.md)
 
 # ¿Cómo aplicar Scrum?
 
