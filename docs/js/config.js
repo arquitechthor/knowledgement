@@ -4,21 +4,20 @@
  *
  * Para agregar nuevo contenido:
  *
- *  1. Agrega tu archivo .md en docs/content/Carrera Arquitechthor/...
- *     (puedes crear subcarpetas si lo necesitas)
+ *  1. Crea tu archivo .html en docs/content/ (en la subcarpeta correspondiente)
  *
  *  2. Agrega una entrada en el array `nav` siguiendo el patrón:
  *
  *     // Página simple (sin hijos):
- *     { title: "Mi tema", icon: "📄", file: "content/Carrera Arquitechthor/Mi tema.html" }
+ *     { title: "Mi tema", icon: "📄", file: "content/mi-tema.html" }
  *
  *     // Tema con sub-páginas:
  *     {
  *       title: "Mi tema",
  *       icon: "📁",
- *       file: "content/Carrera Arquitechthor/Mi tema.html",   // índice del tema (opcional)
+ *       file: "content/mi-tema.html",   // índice del tema (opcional)
  *       children: [
- *         { title: "Sub-página 1", file: "content/Carrera Arquitechthor/Mi tema/Sub-página 1.html" },
+ *         { title: "Sub-página 1", file: "content/mi-tema/sub-pagina-1.html" },
  *       ]
  *     }
  *
@@ -51,50 +50,50 @@ const SITE_CONFIG = {
         {
           title: "Scrum",
           icon: "🔄",
-          file: "content/Carrera Arquitechthor/Scrum.html",
+          file: "content/scrum.html",
           children: [
-            { title: "¿Qué es agilidad?",                          file: "content/Carrera Arquitechthor/Scrum/Qué es agilidad.html" },
-            { title: "El manifiesto ágil",                         file: "content/Carrera Arquitechthor/Scrum/El manifiesto ágil.html" },
-            { title: "Principios del manifiesto ágil",             file: "content/Carrera Arquitechthor/Scrum/Principios del manifiesto ágil.html" },
-            { title: "¿Qué es Scrum y para qué sirve?",           file: "content/Carrera Arquitechthor/Scrum/Qué es scrum y para qué sirve.html" },
-            { title: "Valores de Scrum",                           file: "content/Carrera Arquitechthor/Scrum/Valores de scrum.html" },
-            { title: "Términos básicos y 11 elementos",            file: "content/Carrera Arquitechthor/Scrum/Términos básicos y los 11 elementos fundamentales.html" },
-            { title: "Product Owner",                              file: "content/Carrera Arquitechthor/Scrum/Product owner.html" },
-            { title: "Development Team",                           file: "content/Carrera Arquitechthor/Scrum/Development team.html" },
-            { title: "Scrum Team",                                 file: "content/Carrera Arquitechthor/Scrum/Scrum team.html" },
-            { title: "Scrum Master",                               file: "content/Carrera Arquitechthor/Scrum/Scrum master.html" },
-            { title: "Sprint Planning",                            file: "content/Carrera Arquitechthor/Scrum/Sprint planning.html" },
-            { title: "Daily Meeting",                              file: "content/Carrera Arquitechthor/Scrum/Daily meeting.html" },
-            { title: "Sprint Review",                              file: "content/Carrera Arquitechthor/Scrum/Sprint review.html" },
-            { title: "Retrospectiva",                              file: "content/Carrera Arquitechthor/Scrum/Retrospectiva.html" },
-            { title: "Stakeholder",                                file: "content/Carrera Arquitechthor/Scrum/Stakeholder.html" },
-            { title: "Kanban",                                     file: "content/Carrera Arquitechthor/Scrum/Kanban.html" },
-            { title: "Team Agreements",                            file: "content/Carrera Arquitechthor/Scrum/Team agreements.html" },
+            { title: "¿Qué es agilidad?",                          file: "content/scrum/que-es-agilidad.html" },
+            { title: "El manifiesto ágil",                         file: "content/scrum/el-manifiesto-agil.html" },
+            { title: "Principios del manifiesto ágil",             file: "content/scrum/principios-del-manifiesto-agil.html" },
+            { title: "¿Qué es Scrum y para qué sirve?",           file: "content/scrum/que-es-scrum-y-para-que-sirve.html" },
+            { title: "Valores de Scrum",                           file: "content/scrum/valores-de-scrum.html" },
+            { title: "Términos básicos y 11 elementos",            file: "content/scrum/terminos-basicos-y-los-11-elementos-fundamentales.html" },
+            { title: "Product Owner",                              file: "content/scrum/product-owner.html" },
+            { title: "Development Team",                           file: "content/scrum/development-team.html" },
+            { title: "Scrum Team",                                 file: "content/scrum/scrum-team.html" },
+            { title: "Scrum Master",                               file: "content/scrum/scrum-master.html" },
+            { title: "Sprint Planning",                            file: "content/scrum/sprint-planning.html" },
+            { title: "Daily Meeting",                              file: "content/scrum/daily-meeting.html" },
+            { title: "Sprint Review",                              file: "content/scrum/sprint-review.html" },
+            { title: "Retrospectiva",                              file: "content/scrum/retrospectiva.html" },
+            { title: "Stakeholder",                                file: "content/scrum/stakeholder.html" },
+            { title: "Kanban",                                     file: "content/scrum/kanban.html" },
+            { title: "Team Agreements",                            file: "content/scrum/team-agreements.html" },
           ]
         },
         {
           title: "English",
           icon: "🇬🇧",
-          file: "content/Carrera Arquitechthor/English.html",
+          file: "content/english.html",
           children: [
-            { title: "Articles A and An",                          file: "content/Carrera Arquitechthor/English/Articles a and an.html" },
-            { title: "Conditionals",                               file: "content/Carrera Arquitechthor/English/Conditionals.html" },
-            { title: "Present Perfect",                            file: "content/Carrera Arquitechthor/English/Present perfect.html" },
-            { title: "Past Perfect",                               file: "content/Carrera Arquitechthor/English/Past perfect.html" },
-            { title: "Past Perfect – Exposición",                  file: "content/Carrera Arquitechthor/English/Past perfect expo.html" },
-            { title: "Reported Speech",                            file: "content/Carrera Arquitechthor/English/Reported speech.html" },
-            { title: "Programming Vocabulary",                     file: "content/Carrera Arquitechthor/English/Programming vocabulary.html" },
-            { title: "How to Keep Studying While Traveling",       file: "content/Carrera Arquitechthor/English/How to keep studying while traveling.html" },
-            { title: "Lecciones en YouTube",                       file: "content/Carrera Arquitechthor/English/Lecciones en youtube.html" },
-            { title: "Music to Enjoy",                             file: "content/Carrera Arquitechthor/English/Music to enjoy.html" },
+            { title: "Articles A and An",                          file: "content/english/articles-a-and-an.html" },
+            { title: "Conditionals",                               file: "content/english/conditionals.html" },
+            { title: "Present Perfect",                            file: "content/english/present-perfect.html" },
+            { title: "Past Perfect",                               file: "content/english/past-perfect.html" },
+            { title: "Past Perfect – Exposición",                  file: "content/english/past-perfect-expo.html" },
+            { title: "Reported Speech",                            file: "content/english/reported-speech.html" },
+            { title: "Programming Vocabulary",                     file: "content/english/programming-vocabulary.html" },
+            { title: "How to Keep Studying While Traveling",       file: "content/english/how-to-keep-studying-while-traveling.html" },
+            { title: "Lecciones en YouTube",                       file: "content/english/lecciones-en-youtube.html" },
+            { title: "Music to Enjoy",                             file: "content/english/music-to-enjoy.html" },
           ]
         },
         {
           title: "GNU / Linux",
           icon: "🐧",
-          file: "content/Carrera Arquitechthor/Gnu linux.html",
+          file: "content/gnu-linux.html",
           children: [
-            { title: "Lista de comandos interesantes",             file: "content/Carrera Arquitechthor/GNU Linux/Lista de comandos interesantes.html" },
+            { title: "Lista de comandos interesantes",             file: "content/gnu-linux/lista-de-comandos-interesantes.html" },
           ]
         },
       ]
@@ -111,53 +110,53 @@ const SITE_CONFIG = {
         {
           title: "IDE",
           icon: "💻",
-          file: "content/Carrera Arquitechthor/Ide.html",
+          file: "content/ide.html",
           children: [
-            { title: "IntelliJ IDEA",                              file: "content/Carrera Arquitechthor/IDE/Intellij.html" },
-            { title: "IntelliJ — Plugins",                         file: "content/Carrera Arquitechthor/IDE/IntelliJ/Plugins.html" },
-            { title: "Visual Studio Code",                         file: "content/Carrera Arquitechthor/IDE/Visual studio code.html" },
-            { title: "VS Code — Plugins",                          file: "content/Carrera Arquitechthor/IDE/Visual Studio Code/Plugins.html" },
+            { title: "IntelliJ IDEA",                              file: "content/ide/intellij.html" },
+            { title: "IntelliJ — Plugins",                         file: "content/ide/intellij/plugins.html" },
+            { title: "Visual Studio Code",                         file: "content/ide/visual-studio-code.html" },
+            { title: "VS Code — Plugins",                          file: "content/ide/visual-studio-code/plugins.html" },
           ]
         },
         {
           title: "Conceptos básicos de programación",
           icon: "📐",
-          file: "content/Carrera Arquitechthor/Conceptos básicos de programación.html",
+          file: "content/conceptos-basicos-de-programacion.html",
           children: [
-            { title: "Programación orientada a objetos",           file: "content/Carrera Arquitechthor/Conceptos básicos de programación/Programación orientada a objetos.html" },
-            { title: "Cláusulas de guarda",                        file: "content/Carrera Arquitechthor/Conceptos básicos de programación/Clausulas de guarda.html" },
+            { title: "Programación orientada a objetos",           file: "content/conceptos-basicos-de-programacion/programacion-orientada-a-objetos.html" },
+            { title: "Cláusulas de guarda",                        file: "content/conceptos-basicos-de-programacion/clausulas-de-guarda.html" },
           ]
         },
         {
           title: "Principios de programación",
           icon: "📜",
-          file: "content/Carrera Arquitechthor/Principios de programación.html",
+          file: "content/principios-de-programacion.html",
           children: [
-            { title: "DDD — Domain-Driven Design",                 file: "content/Carrera Arquitechthor/Principios de Programación/Ddd.html" },
+            { title: "DDD — Domain-Driven Design",                 file: "content/principios-de-programacion/ddd.html" },
           ]
         },
         {
           title: "Versioning",
           icon: "🔀",
-          file: "content/Carrera Arquitechthor/Versioning.html",
+          file: "content/versioning.html",
           children: [
-            { title: "Git",                                        file: "content/Carrera Arquitechthor/Versioning/Git.html" },
-            { title: "Git — Lista de comandos",                    file: "content/Carrera Arquitechthor/Versioning/Git/Lista de comandos.html" },
-            { title: "Git — Notas interesantes",                   file: "content/Carrera Arquitechthor/Versioning/Git/Notas interesantes.html" },
-            { title: "Conventional Commits",                       file: "content/Carrera Arquitechthor/Versioning/Conventional commits.html" },
+            { title: "Git",                                        file: "content/versioning/git.html" },
+            { title: "Git — Lista de comandos",                    file: "content/versioning/git/lista-de-comandos.html" },
+            { title: "Git — Notas interesantes",                   file: "content/versioning/git/notas-interesantes.html" },
+            { title: "Conventional Commits",                       file: "content/versioning/conventional-commits.html" },
           ]
         },
         {
           title: "Bases de datos",
           icon: "🗄️",
-          file: "content/Carrera Arquitechthor/Bases de datos.html",
+          file: "content/bases-de-datos.html",
           children: [
-            { title: "MySQL",                                      file: "content/Carrera Arquitechthor/Bases de Datos/Mysql.html" },
-            { title: "Oracle",                                     file: "content/Carrera Arquitechthor/Bases de Datos/Oracle.html" },
-            { title: "PostgreSQL",                                 file: "content/Carrera Arquitechthor/Bases de Datos/Postgres.html" },
-            { title: "MongoDB",                                    file: "content/Carrera Arquitechthor/Bases de Datos/Mongodb.html" },
-            { title: "Redis",                                      file: "content/Carrera Arquitechthor/Bases de Datos/Redis.html" },
-            { title: "H2",                                         file: "content/Carrera Arquitechthor/Bases de Datos/H2.html" },
+            { title: "MySQL",                                      file: "content/bases-de-datos/mysql.html" },
+            { title: "Oracle",                                     file: "content/bases-de-datos/oracle.html" },
+            { title: "PostgreSQL",                                 file: "content/bases-de-datos/postgres.html" },
+            { title: "MongoDB",                                    file: "content/bases-de-datos/mongodb.html" },
+            { title: "Redis",                                      file: "content/bases-de-datos/redis.html" },
+            { title: "H2",                                         file: "content/bases-de-datos/h2.html" },
           ]
         },
       ]
@@ -174,71 +173,71 @@ const SITE_CONFIG = {
         {
           title: "Frontend",
           icon: "🖼️",
-          file: "content/Carrera Arquitechthor/Frontend.html",
+          file: "content/frontend.html",
           children: [
-            { title: "JavaScript",                                 file: "content/Carrera Arquitechthor/Frontend/Javascript.html" },
-            { title: "JavaScript — Debugging",                     file: "content/Carrera Arquitechthor/Frontend/JavaScript/Debugging.html" },
-            { title: "Jest",                                       file: "content/Carrera Arquitechthor/Frontend/Jest.html" },
-            { title: "Bibliotecas y Frameworks",                   file: "content/Carrera Arquitechthor/Frontend/Bibliotecas y frameworks.html" },
-            { title: "Angular",                                    file: "content/Carrera Arquitechthor/Frontend/Bibliotecas y Frameworks/Angular.html" },
-            { title: "React.js",                                   file: "content/Carrera Arquitechthor/Frontend/Bibliotecas y Frameworks/Reactjs.html" },
+            { title: "JavaScript",                                 file: "content/frontend/javascript.html" },
+            { title: "JavaScript — Debugging",                     file: "content/frontend/javascript/debugging.html" },
+            { title: "Jest",                                       file: "content/frontend/jest.html" },
+            { title: "Bibliotecas y Frameworks",                   file: "content/frontend/bibliotecas-y-frameworks.html" },
+            { title: "Angular",                                    file: "content/frontend/bibliotecas-y-frameworks/angular.html" },
+            { title: "React.js",                                   file: "content/frontend/bibliotecas-y-frameworks/reactjs.html" },
           ]
         },
         {
           title: "Java",
           icon: "☕",
-          file: "content/Carrera Arquitechthor/Java.html",
+          file: "content/java.html",
           children: [
-            { title: "Lombok",                                     file: "content/Carrera Arquitechthor/Java/Lombok.html" },
-            { title: "Streams",                                    file: "content/Carrera Arquitechthor/Java/Stream.html" },
-            { title: "Programación funcional",                     file: "content/Carrera Arquitechthor/Java/Programación funcional.html" },
-            { title: "Dependencias",                               file: "content/Carrera Arquitechthor/Java/Dependencias.html" },
-            { title: "Maven",                                      file: "content/Carrera Arquitechthor/Java/Dependencias/Maven.html" },
+            { title: "Lombok",                                     file: "content/java/lombok.html" },
+            { title: "Streams",                                    file: "content/java/stream.html" },
+            { title: "Programación funcional",                     file: "content/java/programacion-funcional.html" },
+            { title: "Dependencias",                               file: "content/java/dependencias.html" },
+            { title: "Maven",                                      file: "content/java/dependencias/maven.html" },
           ]
         },
         {
           title: "Testing",
           icon: "🧪",
-          file: "content/Carrera Arquitechthor/Testing.html",
+          file: "content/testing.html",
           children: [
-            { title: "JUnit",                                      file: "content/Carrera Arquitechthor/Testing/Junit.html" },
-            { title: "TDD",                                        file: "content/Carrera Arquitechthor/Testing/Tdd.html" },
-            { title: "Mitos del testing",                          file: "content/Carrera Arquitechthor/Testing/Mitos.html" },
+            { title: "JUnit",                                      file: "content/testing/junit.html" },
+            { title: "TDD",                                        file: "content/testing/tdd.html" },
+            { title: "Mitos del testing",                          file: "content/testing/mitos.html" },
           ]
         },
         {
           title: "Spring Framework",
           icon: "🍃",
-          file: "content/Carrera Arquitechthor/Spring framework.html",
+          file: "content/spring-framework.html",
           children: [
-            { title: "Cache",                                      file: "content/Carrera Arquitechthor/Spring Framework/Cache.html" },
-            { title: "Spring AI",                                  file: "content/Carrera Arquitechthor/Spring Framework/Spring ai.html" },
-            { title: "Ámbito de un Bean",                          file: "content/Carrera Arquitechthor/Spring Framework/Qué es el ámbito de un bean.html" },
+            { title: "Cache",                                      file: "content/spring-framework/cache.html" },
+            { title: "Spring AI",                                  file: "content/spring-framework/spring-ai.html" },
+            { title: "Ámbito de un Bean",                          file: "content/spring-framework/que-es-el-ambito-de-un-bean.html" },
           ]
         },
         {
           title: "Queues",
           icon: "📨",
-          file: "content/Carrera Arquitechthor/Queues.html",
+          file: "content/queues.html",
           children: [
-            { title: "Apache Kafka",                               file: "content/Carrera Arquitechthor/Queues/Apache kafka.html" },
+            { title: "Apache Kafka",                               file: "content/queues/apache-kafka.html" },
           ]
         },
         {
           title: "REST API",
           icon: "🌐",
-          file: "content/Carrera Arquitechthor/Rest api.html",
+          file: "content/rest-api.html",
           children: [
-            { title: "Web Service",                                file: "content/Carrera Arquitechthor/Rest API/Web service.html" },
-            { title: "Apigee",                                     file: "content/Carrera Arquitechthor/Rest API/Apigee.html" },
+            { title: "Web Service",                                file: "content/rest-api/web-service.html" },
+            { title: "Apigee",                                     file: "content/rest-api/apigee.html" },
           ]
         },
         {
           title: "gRPC",
           icon: "📡",
-          file: "content/Carrera Arquitechthor/Grpc.html",
+          file: "content/grpc.html",
           children: [
-            { title: "¿Qué es gRPC?",                              file: "content/Carrera Arquitechthor/gRPC/Qué es grpc.html" },
+            { title: "¿Qué es gRPC?",                              file: "content/grpc/que-es-grpc.html" },
           ]
         },
       ]
@@ -255,34 +254,34 @@ const SITE_CONFIG = {
         {
           title: "Clean Code",
           icon: "✨",
-          file: "content/Carrera Arquitechthor/Clean code.html",
+          file: "content/clean-code.html",
         },
         {
           title: "SOLID",
           icon: "🧱",
-          file: "content/Carrera Arquitechthor/Solid.html",
+          file: "content/solid.html",
           children: [
-            { title: "Introducción del autor",                     file: "content/Carrera Arquitechthor/SOLID/Introducción del autor.html" },
-            { title: "Introducción personal",                      file: "content/Carrera Arquitechthor/SOLID/Introducción personal.html" },
-            { title: "SRP — Responsabilidad única",                file: "content/Carrera Arquitechthor/SOLID/Srp el principio de responsabilidad única.html" },
-            { title: "OCP — Abierto-cerrado",                      file: "content/Carrera Arquitechthor/SOLID/Ocp principio abierto-cerrado.html" },
-            { title: "LSP — Sustitución de Liskov",                file: "content/Carrera Arquitechthor/SOLID/Lsp el principio de sustitución de liskov.html" },
-            { title: "ISP — Segregación de interfaces",            file: "content/Carrera Arquitechthor/SOLID/Isp el principio de segregación de interfaces.html" },
-            { title: "DIP — Inversión de dependencia",             file: "content/Carrera Arquitechthor/SOLID/Dip el principio de inversión de dependencia.html" },
+            { title: "Introducción del autor",                     file: "content/solid/introduccion-del-autor.html" },
+            { title: "Introducción personal",                      file: "content/solid/introduccion-personal.html" },
+            { title: "SRP — Responsabilidad única",                file: "content/solid/srp-el-principio-de-responsabilidad-unica.html" },
+            { title: "OCP — Abierto-cerrado",                      file: "content/solid/ocp-principio-abierto-cerrado.html" },
+            { title: "LSP — Sustitución de Liskov",                file: "content/solid/lsp-el-principio-de-sustitucion-de-liskov.html" },
+            { title: "ISP — Segregación de interfaces",            file: "content/solid/isp-el-principio-de-segregacion-de-interfaces.html" },
+            { title: "DIP — Inversión de dependencia",             file: "content/solid/dip-el-principio-de-inversion-de-dependencia.html" },
           ]
         },
         {
           title: "Design Patterns",
           icon: "🎨",
-          file: "content/Carrera Arquitechthor/Design patterns.html",
+          file: "content/design-patterns.html",
           children: [
-            { title: "Strategy",                                   file: "content/Carrera Arquitechthor/Design Patterns/Strategy.html" },
+            { title: "Strategy",                                   file: "content/design-patterns/strategy.html" },
           ]
         },
         {
           title: "Complejidad",
           icon: "📊",
-          file: "content/Carrera Arquitechthor/Complejidad.html",
+          file: "content/complejidad.html",
         },
       ]
     },
@@ -298,45 +297,45 @@ const SITE_CONFIG = {
         {
           title: "CI/CD",
           icon: "🚀",
-          file: "content/Carrera Arquitechthor/Cd ci.html",
+          file: "content/cd-ci.html",
         },
         {
           title: "Arquitectura",
           icon: "🏛️",
-          file: "content/Carrera Arquitechthor/Arquitectura.html",
+          file: "content/arquitectura.html",
           children: [
-            { title: "¿Qué es arquitectura?",                      file: "content/Carrera Arquitechthor/Arquitectura/Qué es arquitectura.html" },
-            { title: "Arquitectura de microservicios",             file: "content/Carrera Arquitechthor/Arquitectura/Arquitectura de microservicios.html" },
-            { title: "Resiliencia",                                file: "content/Carrera Arquitechthor/Arquitectura/Resiliencia.html" },
+            { title: "¿Qué es arquitectura?",                      file: "content/arquitectura/que-es-arquitectura.html" },
+            { title: "Arquitectura de microservicios",             file: "content/arquitectura/arquitectura-de-microservicios.html" },
+            { title: "Resiliencia",                                file: "content/arquitectura/resiliencia.html" },
           ]
         },
         {
           title: "Docker",
           icon: "🐳",
-          file: "content/Carrera Arquitechthor/Dockers.html",
+          file: "content/dockers.html",
           children: [
-            { title: "¿Qué es Docker?",                            file: "content/Carrera Arquitechthor/Dockers/Qué es docker.html" },
-            { title: "¿Qué es un contenedor?",                     file: "content/Carrera Arquitechthor/Dockers/Qué es un contenedor.html" },
-            { title: "¿Por qué Docker?",                           file: "content/Carrera Arquitechthor/Dockers/Por qué docker.html" },
-            { title: "Descarga e instalación",                     file: "content/Carrera Arquitechthor/Dockers/Descarga.html" },
-            { title: "Arquitectura Docker",                        file: "content/Carrera Arquitechthor/Dockers/Arquitectura docker.html" },
-            { title: "Comandos",                                   file: "content/Carrera Arquitechthor/Dockers/Comandos.html" },
+            { title: "¿Qué es Docker?",                            file: "content/dockers/que-es-docker.html" },
+            { title: "¿Qué es un contenedor?",                     file: "content/dockers/que-es-un-contenedor.html" },
+            { title: "¿Por qué Docker?",                           file: "content/dockers/por-que-docker.html" },
+            { title: "Descarga e instalación",                     file: "content/dockers/descarga.html" },
+            { title: "Arquitectura Docker",                        file: "content/dockers/arquitectura-docker.html" },
+            { title: "Comandos",                                   file: "content/dockers/comandos.html" },
           ]
         },
         {
           title: "Kubernetes",
           icon: "☸️",
-          file: "content/Carrera Arquitechthor/Kubernetes.html",
+          file: "content/kubernetes.html",
         },
         {
           title: "Monitoring",
           icon: "📈",
-          file: "content/Carrera Arquitechthor/Monitoring.html",
+          file: "content/monitoring.html",
         },
         {
           title: "DevOps",
           icon: "♾️",
-          file: "content/Carrera Arquitechthor/Devops.html",
+          file: "content/devops.html",
         },
       ]
     },
@@ -352,33 +351,33 @@ const SITE_CONFIG = {
         {
           title: "Cloud Computing",
           icon: "☁️",
-          file: "content/Carrera Arquitechthor/Cloud computing.html",
+          file: "content/cloud-computing.html",
           children: [
-            { title: "AWS",                                        file: "content/Carrera Arquitechthor/Cloud Computing/Aws.html" },
-            { title: "AWS — Enlaces",                              file: "content/Carrera Arquitechthor/Cloud Computing/AWS/Enlaces.html" },
+            { title: "AWS",                                        file: "content/cloud-computing/aws.html" },
+            { title: "AWS — Enlaces",                              file: "content/cloud-computing/aws/enlaces.html" },
           ]
         },
         {
           title: "Microservices with Spring Cloud",
           icon: "🌐",
-          file: "content/Carrera Arquitechthor/Microservices with spring cloud.html",
+          file: "content/microservices-with-spring-cloud.html",
           children: [
-            { title: "Ventajas de los microservicios",             file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Ventajas de los microservicios.html" },
-            { title: "Desafíos",                                   file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Desafíos.html" },
-            { title: "Paradigmas de comunicación",                 file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Paradigmas de comunicación.html" },
-            { title: "Config Server",                              file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Config server.html" },
-            { title: "Config",                                     file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Config.html" },
-            { title: "Registry — Service Discovery",               file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Registry.html" },
-            { title: "API Gateway / Edge Service",                 file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Api gateway edge service.html" },
-            { title: "Load Balancer",                              file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Load balancer.html" },
-            { title: "Circuit Breaker",                            file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Circuit breaker.html" },
-            { title: "Patrones de resiliencia",                    file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Patrones de resiliencia.html" },
-            { title: "Feign",                                      file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Feign.html" },
-            { title: "Sleuth — Distributed Tracing",               file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Sleuth.html" },
-            { title: "Actuator",                                   file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Actuator.html" },
-            { title: "Log Center",                                 file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Log center.html" },
-            { title: "Monitoring",                                 file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Monitoring.html" },
-            { title: "Enlaces",                                    file: "content/Carrera Arquitechthor/Microservices with Spring Cloud/Enlaces.html" },
+            { title: "Ventajas de los microservicios",             file: "content/microservices-with-spring-cloud/ventajas-de-los-microservicios.html" },
+            { title: "Desafíos",                                   file: "content/microservices-with-spring-cloud/desafios.html" },
+            { title: "Paradigmas de comunicación",                 file: "content/microservices-with-spring-cloud/paradigmas-de-comunicacion.html" },
+            { title: "Config Server",                              file: "content/microservices-with-spring-cloud/config-server.html" },
+            { title: "Config",                                     file: "content/microservices-with-spring-cloud/config.html" },
+            { title: "Registry — Service Discovery",               file: "content/microservices-with-spring-cloud/registry.html" },
+            { title: "API Gateway / Edge Service",                 file: "content/microservices-with-spring-cloud/api-gateway-edge-service.html" },
+            { title: "Load Balancer",                              file: "content/microservices-with-spring-cloud/load-balancer.html" },
+            { title: "Circuit Breaker",                            file: "content/microservices-with-spring-cloud/circuit-breaker.html" },
+            { title: "Patrones de resiliencia",                    file: "content/microservices-with-spring-cloud/patrones-de-resiliencia.html" },
+            { title: "Feign",                                      file: "content/microservices-with-spring-cloud/feign.html" },
+            { title: "Sleuth — Distributed Tracing",               file: "content/microservices-with-spring-cloud/sleuth.html" },
+            { title: "Actuator",                                   file: "content/microservices-with-spring-cloud/actuator.html" },
+            { title: "Log Center",                                 file: "content/microservices-with-spring-cloud/log-center.html" },
+            { title: "Monitoring",                                 file: "content/microservices-with-spring-cloud/monitoring.html" },
+            { title: "Enlaces",                                    file: "content/microservices-with-spring-cloud/enlaces.html" },
           ]
         },
       ]
@@ -395,12 +394,12 @@ const SITE_CONFIG = {
         {
           title: "Next to Study",
           icon: "📋",
-          file: "content/Carrera Arquitechthor/Next to study.html",
+          file: "content/next-to-study.html",
         },
         {
           title: "Enlaces",
           icon: "🔗",
-          file: "content/Carrera Arquitechthor/Enlaces.html",
+          file: "content/enlaces.html",
         },
       ]
     },
