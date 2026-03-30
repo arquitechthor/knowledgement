@@ -1,0 +1,43 @@
+<h1>Cache</h1>
+<p>import org.springframework.stereotype.Service;<br />
+import org.springframework.cache.annotation.CacheEvict;<br />
+import org.springframework.cache.annotation.Cacheable;<br />
+import org.springframework.cache.annotation.CachePut;</p>
+<p>@Service<br />
+public class CachingArticlesService implements ArticlesService {</p>
+<pre><code>private final ArticlesRepository articlesRepository;
+
+public CachingArticlesService(ArticlesRepository articlesRepository) {
+    this.articlesRepository = articlesRepository;
+}
+
+@Override
+@Cacheable(value = &quot;articles&quot;, key = &quot;#articleId&quot;)
+public Article getArticle(Long articleId) {
+    return articlesRepository.get(articleId);
+}
+
+@Override
+@CacheEvict(value = &quot;articles&quot;, key = &quot;#articleId&quot;)
+public void removeArticle(Long articleId) {
+    articlesRepository.remove(articleId);
+}
+
+@Override
+public void saveArticle(Article article) {
+    articlesRepository.save(article);
+}
+
+@Override
+@CachePut(value = &quot;articles&quot;, key = &quot;#articleId&quot;)
+public Article updateLikes(Long articleId, int likes) {
+    return articlesRepository.updateLikes(articleId, likes);
+}
+
+</code></pre>
+<p>}</p>
+<p>Explicación:<br />
+@Cacheable("articles") en getArticle: Si el artículo con articleId ya está en caché, se devuelve directamente sin consultar articlesRepository.get().</p>
+<p>@CacheEvict("articles") en removeArticle: Elimina el artículo del caché cuando se borra del repositorio.</p>
+<p>saveArticle sin anotación: No almacena en caché, solo guarda en el repositorio.</p>
+<p>@CachePut("articles") en updateLikes: Actualiza el artículo en el caché y en el repositorio.</p>

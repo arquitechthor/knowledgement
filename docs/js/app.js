@@ -1,6 +1,6 @@
 /**
  * Knowledgement — app.js
- * SPA que carga y renderiza archivos Markdown desde docs/content/
+ * SPA que carga fragmentos HTML pre-generados desde docs/content/
  */
 
 // ============================================================
@@ -10,42 +10,6 @@ let currentFile = null;
 const allPages = [];   // Lista plana para búsqueda
 
 // ============================================================
-// Configuración de marked.js
-// ============================================================
-function configureMarked() {
-  const renderer = new marked.Renderer();
-
-  // Imágenes: resuelve rutas relativas al archivo actual
-  renderer.image = function ({ href, title, text }) {
-    if (href && !href.startsWith('http') && !href.startsWith('data:') && currentFile) {
-      const dir = currentFile.split('/').slice(0, -1).join('/');
-      const rawPath = dir + '/' + href;
-      // Encode cada segmento del path (preserva barras)
-      href = rawPath.split('/').map(s => encodeURIComponent(decodeURIComponent(s))).join('/');
-    }
-    const titleAttr = title ? ` title="${escapeAttr(title)}"` : '';
-    return `<img src="${href}" alt="${text || ''}"${titleAttr} class="md-image" loading="lazy">`;
-  };
-
-  // Links: convierte links .md internos en navegación SPA
-  renderer.link = function ({ href, title, text }) {
-    if (href && href.endsWith('.md') && !href.startsWith('http')) {
-      const base = currentFile ? currentFile.split('/').slice(0, -1).join('/') + '/' : '';
-      href = '#/' + base + href;
-      return `<a href="${href}"${title ? ` title="${escapeAttr(title)}"` : ''}>${text}</a>`;
-    }
-    const external = href && href.startsWith('http') ? ' target="_blank" rel="noopener noreferrer"' : '';
-    return `<a href="${href || '#'}"${title ? ` title="${escapeAttr(title)}"` : ''}${external}>${text}</a>`;
-  };
-
-  marked.use({ renderer, gfm: true, breaks: false });
-}
-
-function escapeAttr(str) {
-  return str.replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
-
-// ============================================================
 // Construcción de la navegación
 // ============================================================
 function buildNav() {
@@ -53,7 +17,6 @@ function buildNav() {
   navTree.innerHTML = '';
 
   SITE_CONFIG.nav.forEach(section => {
-    // Cabecera de sección
     const sectionDiv = document.createElement('div');
     sectionDiv.className = 'nav-section';
     if (section.id) sectionDiv.dataset.sectionId = section.id;
@@ -65,7 +28,6 @@ function buildNav() {
       `<span class="nav-section-title">${section.section}</span>`;
     sectionDiv.appendChild(header);
 
-    // Items
     const list = document.createElement('ul');
     list.className = 'nav-items';
     section.items.forEach(item => list.appendChild(createNavItem(item)));
@@ -92,22 +54,19 @@ function createNavItem(item, isChild = false) {
   link.innerHTML =
     (isChild ? '' : `<span class="nav-item-icon">${item.icon || '📄'}</span>`) +
     `<span class="nav-item-title">${item.title}</span>` +
-    (hasChildren ? '<span class="nav-arrow">▶</span>' : '');
+    (hasChildren ? '<span class="nav-arrow">&#9658;</span>' : '');
 
-  // Click: navegar y/o expandir
   link.addEventListener('click', () => {
     if (item.file) navigateTo(item.file);
     if (hasChildren) li.classList.toggle('open');
   });
 
-  // Teclado
   link.addEventListener('keydown', e => {
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); link.click(); }
   });
 
   li.appendChild(link);
 
-  // Sub-páginas
   if (hasChildren) {
     const childList = document.createElement('ul');
     childList.className = 'nav-children';
@@ -155,7 +114,7 @@ function navigateTo(filePath) {
 }
 
 // ============================================================
-// Carga y renderizado de Markdown
+// Carga e inyección de HTML
 // ============================================================
 async function loadContent(filePath) {
   currentFile = filePath;
@@ -169,15 +128,18 @@ async function loadContent(filePath) {
 
     if (!res.ok) throw new Error(`HTTP ${res.status} — ${res.statusText}`);
 
-    const markdown = await res.text();
-    const html = marked.parse(markdown);
+    const html = await res.text();
 
+    // Inyectar el fragmento HTML
     contentInner.innerHTML = html;
 
-    // Syntax highlighting
+    // Syntax highlighting en bloques de código
     contentInner.querySelectorAll('pre code').forEach(block => {
       hljs.highlightElement(block);
     });
+
+    // Convertir links HTML internos en navegación SPA
+    fixInternalLinks(contentInner, filePath);
 
     // Scroll al inicio
     document.getElementById('content').scrollTop = 0;
@@ -188,12 +150,39 @@ async function loadContent(filePath) {
   } catch (err) {
     contentInner.innerHTML = `
       <div class="error-message">
-        <div class="error-icon">⚠️</div>
+        <div class="error-icon">&#9888;</div>
         <h2>No se pudo cargar el contenido</h2>
         <p>${err.message}</p>
         <p class="error-path">Ruta: <code>${filePath}</code></p>
       </div>`;
   }
+}
+
+/**
+ * Convierte enlaces a archivos .html relativos en navegación por hash,
+ * y abre los externos en nueva pestaña.
+ */
+function fixInternalLinks(container, currentFilePath) {
+  const dir = currentFilePath.split('/').slice(0, -1).join('/');
+
+  container.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('mailto:')) return;
+
+    if (href.startsWith('http://') || href.startsWith('https://')) {
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener noreferrer');
+      return;
+    }
+
+    // Enlace interno a otro .html
+    const resolved = dir ? dir + '/' + href : href;
+    a.setAttribute('href', '#/' + resolved);
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      navigateTo(resolved);
+    });
+  });
 }
 
 // ============================================================
@@ -205,12 +194,11 @@ function showWelcome() {
 
   const cards = SITE_CONFIG.nav.map(section => {
     const titles = section.items.map(i => i.title).join(', ');
-    // Navega al primer item con archivo al hacer click
     const firstFile = section.items.find(i => i.file)?.file || '';
     return `
       <div class="welcome-card" onclick="navigateTo('${firstFile.replace(/'/g, "\\'")}')">
         <div class="welcome-card-header">
-          <span class="welcome-card-icon">${section.icon || '📁'}</span>
+          <span class="welcome-card-icon">${section.icon || '&#128193;'}</span>
           <span class="welcome-card-title">${section.section}</span>
         </div>
         <div class="welcome-card-items">${titles}</div>
@@ -240,7 +228,6 @@ function updateActiveNav(filePath) {
     link.classList.toggle('active', !!isActive);
 
     if (isActive) {
-      // Abre el padre si el hijo está activo
       const parentLi = link.closest('.nav-child')?.parentElement?.closest('.nav-item');
       if (parentLi) parentLi.classList.add('open');
     }
@@ -253,7 +240,7 @@ function updateActiveNav(filePath) {
 function handleSearch(e) {
   const q = e.target.value.trim().toLowerCase();
   const resultsEl = document.getElementById('searchResults');
-  const navTree = document.getElementById('navTree');
+  const navTree   = document.getElementById('navTree');
 
   if (!q) {
     resultsEl.classList.add('hidden');
@@ -271,14 +258,14 @@ function handleSearch(e) {
   );
 
   if (!hits.length) {
-    resultsEl.innerHTML = '<div class="search-no-results">Sin resultados para <em>' + q + '</em></div>';
+    resultsEl.innerHTML = `<div class="search-no-results">Sin resultados para <em>${q}</em></div>`;
     return;
   }
 
   resultsEl.innerHTML = hits.map(p => `
     <div class="search-result" onclick="navigateTo('${p.file.replace(/'/g, "\\'")}')">
       <div class="search-result-title">${highlight(p.title, q)}</div>
-      <div class="search-result-meta">${p.parent ? p.parent + ' · ' : ''}${p.section}</div>
+      <div class="search-result-meta">${p.parent ? p.parent + ' &middot; ' : ''}${p.section}</div>
     </div>`).join('');
 }
 
@@ -304,7 +291,7 @@ function closeSidebar() {
 }
 
 // ============================================================
-// Atajo de teclado Ctrl+K para el buscador
+// Atajo de teclado Ctrl+K
 // ============================================================
 function setupShortcuts() {
   document.addEventListener('keydown', e => {
@@ -319,7 +306,6 @@ function setupShortcuts() {
       if (document.activeElement === input) {
         input.blur();
         input.value = '';
-        // Limpia resultados
         document.getElementById('searchResults').classList.add('hidden');
         document.getElementById('navTree').style.display = '';
       }
@@ -331,29 +317,24 @@ function setupShortcuts() {
 // Inicialización
 // ============================================================
 function init() {
-  // Aplica config
   document.title = SITE_CONFIG.title;
   document.getElementById('githubLink').href = SITE_CONFIG.githubUrl;
 
-  // Volver al inicio
   document.getElementById('homeLink').addEventListener('click', e => {
     e.preventDefault();
     history.pushState(null, '', window.location.pathname);
     showWelcome();
   });
 
-  configureMarked();
   buildNav();
   flattenPages();
   setupShortcuts();
 
-  // Eventos
   window.addEventListener('hashchange', handleRoute);
   document.getElementById('searchInput').addEventListener('input', handleSearch);
   document.getElementById('menuToggle').addEventListener('click', toggleSidebar);
   document.getElementById('sidebarOverlay').addEventListener('click', closeSidebar);
 
-  // Ruta inicial
   handleRoute();
 }
 

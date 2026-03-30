@@ -1,0 +1,92 @@
+<h1>Conventional Commits</h1>
+<p>Un buen mensaje de commit debe seguir esta estructura:</p>
+<pre><code class="language-markup">&lt;tipo&gt;(&lt;área opcional&gt;): &lt;breve descripción en presente&gt;
+&lt;Cuerpo opcional: Explicación detallada si es necesario&gt;
+&lt;Footer opcional: información adicional como referencias a issues o breaking changes&gt;
+</code></pre>
+<pre><code class="language-jsx">
+</code></pre>
+<pre><code class="language-jsx">
+</code></pre>
+<ol>
+<li>Tipo de commit: El tipo indica qué tipo de cambio estás introduciendo. Algunos ejemplos comunes son:</li>
+</ol>
+<ul>
+<li><strong>feat</strong>: Nueva funcionalidad.</li>
+<li><strong>fix</strong>: Corrección de errores.</li>
+<li><strong>chore</strong>: Cambios de mantenimiento (sin impacto en el código, como cambios en configuración o scripts).</li>
+<li><strong>refactor</strong>: Refactorización del código sin cambiar funcionalidad.</li>
+<li><strong>test</strong>: Adición o modificación de pruebas.</li>
+<li><strong>docs</strong>: Cambios en documentación.</li>
+<li><strong>style</strong>: Cambios de formato (espaciado, indentación, sin modificar el código).</li>
+<li><strong>perf</strong>: Mejoras de rendimiento.</li>
+<li><strong>ci</strong>: Cambios en la integración continua.</li>
+<li><strong>build</strong>: Cambios en la configuración de build.</li>
+<li><strong>revert</strong>: Reversión de un commit anterior.</li>
+</ul>
+<ol>
+<li>Área o módulo (opcional)<br />
+El área indica qué parte del código afecta el cambio. Puede ser el nombre de un módulo, un paquete o un componente.</li>
+</ol>
+<p>Ejemplo:</p>
+<p>scss<br />
+Copy<br />
+Edit<br />
+feat(auth): agregar validación en el registro<br />
+3. Breve descripción<br />
+Debe ser clara, en presente y sin exceder 50 caracteres.</p>
+<p>Ejemplo:</p>
+<p>scss<br />
+Copy<br />
+Edit<br />
+fix(database): corregir error en la conexión a PostgreSQL<br />
+4. Cuerpo del commit (opcional)<br />
+Si el cambio es complejo, puedes agregar una descripción más detallada en el cuerpo del commit, separada por una línea en blanco.</p>
+<p>Ejemplo:</p>
+<p>scss<br />
+Copy<br />
+Edit<br />
+fix(seat-reservation): solucionar error de concurrencia</p>
+<p>Se detectó un problema al asignar asientos en concurrencia alta. Se implementó<br />
+un mecanismo de bloqueo optimista para evitar sobreasignación.<br />
+5. Footer (opcional)<br />
+Si el cambio introduce una incompatibilidad o cierra un issue, se puede incluir en el footer.</p>
+<p>Ejemplo:</p>
+<p>yaml<br />
+Copy<br />
+Edit<br />
+BREAKING CHANGE: Se cambió la estructura de la tabla de reservas</p>
+<p>Closes #45<br />
+Ejemplos completos de commits<br />
+Commit con descripción corta</p>
+<p>scss<br />
+Copy<br />
+Edit<br />
+feat(user): agregar endpoint de registro de usuarios<br />
+Commit con descripción detallada</p>
+<p>r<br />
+Copy<br />
+Edit<br />
+fix(payment): corregir error en cálculo de impuestos</p>
+<p>Se corrigió el cálculo de impuestos en compras internacionales,<br />
+asegurando la conversión correcta de divisas.<br />
+Commit con un breaking change</p>
+<p>less<br />
+Copy<br />
+Edit<br />
+refactor(auth): cambiar estrategia de tokens</p>
+<p>Se cambió el método de autenticación de JWT a OAuth2.<br />
+Esto requiere cambios en la configuración del cliente.</p>
+<p>BREAKING CHANGE: Se eliminaron los endpoints antiguos de login.<br />
+Commit que cierra un issue</p>
+<p>scss<br />
+Copy<br />
+Edit<br />
+fix(api): solucionar error 500 en la consulta de pedidos</p>
+<p>Se corrigió una consulta SQL mal formada que causaba errores intermitentes.</p>
+<p>Beneficios de usar este formato</p>
+<p>✅ Historial de commits claro y estructurado</p>
+<p>✅ Fácil generación de changelogs automáticamente</p>
+<p>✅ Facilita la revisión de código en equipos grandes</p>
+<p>✅ Compatible con herramientas como semantic-release para versionado automático</p>
+<p>Si quieres automatizar la validación de estos formatos en tu proyecto, puedes usar herramientas como <a href="https://commitlint.js.org/">commitlint</a>.</p>

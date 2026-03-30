@@ -1,0 +1,82 @@
+<h1>Comandos</h1>
+<p>Podemos usar un terminal con Docker Desktop o Play with docker.</p>
+<p>Con la terminal veamos algunos comandos.</p>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker --version</td>
+<td>versión</td>
+</tr>
+<tr>
+<td>docker info</td>
+<td>muestra información básica de configuración.</td>
+</tr>
+<tr>
+<td>docker run hello-world</td>
+<td>Ejecuta un docker básico de <strong>Docker Hub</strong>.</td>
+</tr>
+<tr>
+<td>docker ps</td>
+<td>Muestra los dockers en ejecución</td>
+</tr>
+<tr>
+<td>docker ps -a</td>
+<td>Muestra todos los dockers independientemente de su estado.</td>
+</tr>
+<tr>
+<td>docker inspect &lt;<em>CONTAINER ID</em>&gt;</td>
+<td>Muestra información detallada de un conteiner n formato Json.</td>
+</tr>
+<tr>
+<td>docker inspect &lt;<em>NAME</em>&gt;</td>
+<td>Lo mismo de lo anterior</td>
+</tr>
+<tr>
+<td>docker run --name &lt;<em>Nuevo nombre</em>&gt; &lt;<em>Nombre Docker</em>&gt;</td>
+<td>Corre un docker bajo el nombre <Nuevo nombre>. Docker no permite tener dos docker con el mismo nombre.</td>
+</tr>
+<tr>
+<td>docker rename &lt;<em>Nombre viejo</em>&gt; &lt;<em>Nombre nuevo</em>&gt;</td>
+<td>Renombra un docker.</td>
+</tr>
+<tr>
+<td>docker rm &lt;<em>CONTAINER ID</em>&gt;</td>
+<td>Elimina un docker. También se puede usar &lt;<em>NAME</em>&gt;</td>
+</tr>
+<tr>
+<td>docker container prune</td>
+<td>Elimina todos los dokers corriendo o detenidos.</td>
+</tr>
+<tr>
+<td>docker run ubuntu</td>
+<td>Corre un sistema operativo Ubuntu. No hace nada peculiar, arranca y finaliza porque no se le enviaron parámetros al <strong>/bin/bash</strong></td>
+</tr>
+<tr>
+<td>docker run -it ubuntu</td>
+<td>Corre Ubuntu pero de modo interactivo. Verás la cónsola de Ubuntu.</td>
+</tr>
+<tr>
+<td>docker run --name <nombre> -d ubuntu tail -f /dev/null</td>
+<td>corre Ubuntu siempre activo (alwaysup), desvinculado (-d) y con algún proceso que no sea /bin/bash (tail -f /dev/null)</td>
+</tr>
+<tr>
+<td>docker exec -it <nombre>  bash</td>
+<td>Ejecuta el proceso bash en modo interactivo (-it) en el contenedor <nombre> que en el paso anterior, de ser ubuntu es un comando válido en el sistema.</td>
+</tr>
+<tr>
+<td>docker stop <nombre></td>
+<td>Mata el docker <nombre>.</td>
+</tr>
+<tr>
+<td>docker network ls</td>
+<td>Lista las redes disponibles para el docker.</td>
+</tr>
+</tbody>
+</table>
+<p>Nota: para docker es indiferente si se usa &lt;<em>CONTAINER ID</em>&gt;o &lt;<em>NAME</em>&gt;</p>
