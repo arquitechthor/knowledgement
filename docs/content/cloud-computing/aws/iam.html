@@ -1,623 +1,626 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IAM — Ficha de Estudio SAA-C03</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- IAM — Ficha de Estudio SAA-C03 -->
 <style>
-  :root {
-    --bg: #0a0e17;
-    --surface: #111827;
-    --surface2: #1a2236;
-    --border: #1e2d47;
-    --accent: #f59e0b;
-    --accent2: #3b82f6;
-    --accent3: #10b981;
-    --danger: #ef4444;
-    --text: #e2e8f0;
-    --muted: #64748b;
-    --label: #94a3b8;
-    --mono: 'IBM Plex Mono', monospace;
-    --sans: 'IBM Plex Sans', sans-serif;
-  }
+/* ============================================================
+   IAM SHEET — Estilos escopados bajo .iam-sheet
+   ============================================================ */
+.iam-sheet {
+  font-family: 'IBM Plex Sans', 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #0f172a;
+}
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+/* Fuente mono */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
 
-  body {
-    font-family: var(--sans);
-    background: var(--bg);
-    color: var(--text);
-    font-size: 14px;
-    line-height: 1.6;
-    padding: 2rem 1rem 4rem;
-  }
+/* Variables locales */
+.iam-sheet {
+  --iam-bg:      #f8fafc;
+  --iam-surface: #ffffff;
+  --iam-surface2:#f1f5f9;
+  --iam-border:  #e2e8f0;
+  --iam-accent:  #d97706;   /* amber */
+  --iam-blue:    #4f46e5;   /* indigo */
+  --iam-green:   #059669;   /* emerald */
+  --iam-red:     #dc2626;
+  --iam-text:    #0f172a;
+  --iam-muted:   #64748b;
+  --iam-label:   #475569;
+  --iam-mono:    'IBM Plex Mono', 'JetBrains Mono', monospace;
+  --iam-radius:  8px;
+}
 
-  /* HEADER */
-  .header {
-    border-left: 4px solid var(--accent);
-    padding: 0.5rem 0 0.5rem 1.5rem;
-    margin-bottom: 2.5rem;
-    position: relative;
-  }
-  .header::before {
-    content: 'SAA-C03 · DOMINIO 1 · SEGURIDAD';
-    font-family: var(--mono);
-    font-size: 10px;
-    color: var(--accent);
-    letter-spacing: 0.15em;
-    display: block;
-    margin-bottom: 6px;
-  }
-  .header h1 {
-    font-size: 2.8rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: #fff;
-    line-height: 1;
-  }
-  .header h1 span { color: var(--accent); }
-  .header .sub {
-    font-size: 13px;
-    color: var(--muted);
-    margin-top: 6px;
-    font-family: var(--mono);
-  }
+/* HEADER */
+.iam-header {
+  border-left: 4px solid var(--iam-accent);
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  margin-bottom: 2rem;
+}
+.iam-breadcrumb {
+  font-family: var(--iam-mono);
+  font-size: 10px;
+  color: var(--iam-accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.iam-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--iam-text);
+  line-height: 1.1;
+  margin: 0 0 6px;
+  border: none;
+  padding: 0;
+}
+.iam-header h1 span { color: var(--iam-accent); }
+.iam-header .iam-sub {
+  font-size: 13px;
+  color: var(--iam-muted);
+  font-family: var(--iam-mono);
+}
 
-  /* INTRO */
-  .intro-box {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-top: 2px solid var(--accent2);
-    border-radius: 8px;
-    padding: 1.25rem 1.5rem;
-    margin-bottom: 2rem;
-    font-size: 14px;
-    color: var(--label);
-    line-height: 1.7;
-  }
-  .intro-box strong { color: var(--text); font-weight: 500; }
+/* INTRO BOX */
+.iam-intro {
+  background: var(--iam-surface);
+  border: 1px solid var(--iam-border);
+  border-top: 3px solid var(--iam-blue);
+  border-radius: var(--iam-radius);
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 1.5rem;
+  font-size: 14px;
+  color: var(--iam-label);
+  line-height: 1.75;
+}
+.iam-intro strong { color: var(--iam-text); font-weight: 600; }
 
-  /* GRID LAYOUT */
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-  @media (max-width: 768px) {
-    .grid-2, .grid-3 { grid-template-columns: 1fr; }
-  }
+/* GRID */
+.iam-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.iam-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+@media (max-width: 700px) {
+  .iam-grid-2, .iam-grid-3 { grid-template-columns: 1fr; }
+}
 
-  /* CARD */
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.25rem;
-    margin-bottom: 1rem;
-  }
-  .card-title {
-    font-family: var(--mono);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .card-title::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
+/* CARD */
+.iam-card {
+  background: var(--iam-surface);
+  border: 1px solid var(--iam-border);
+  border-radius: var(--iam-radius);
+  padding: 1.1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
 
-  /* ROWS */
-  .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 5px 0;
-    border-bottom: 1px solid var(--border);
-    gap: 1rem;
-    font-size: 13px;
-  }
-  .row:last-child { border-bottom: none; }
-  .row-label { color: var(--muted); flex-shrink: 0; min-width: 140px; }
-  .row-val { color: var(--text); text-align: right; font-family: var(--mono); font-size: 12px; }
-  .row-val.green { color: var(--accent3); }
-  .row-val.amber { color: var(--accent); }
-  .row-val.red { color: var(--danger); }
-  .row-val.blue { color: var(--accent2); }
+.iam-card-title {
+  font-family: var(--iam-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--iam-accent);
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.iam-card-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--iam-border);
+}
 
-  /* PILLS */
-  .pill-group { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-  .pill {
-    font-family: var(--mono);
-    font-size: 11px;
-    padding: 3px 9px;
-    border-radius: 4px;
-    border: 1px solid;
-  }
-  .pill-blue { color: var(--accent2); border-color: #1e3a5f; background: #0f1f35; }
-  .pill-green { color: var(--accent3); border-color: #064e3b; background: #022c22; }
-  .pill-amber { color: var(--accent); border-color: #78350f; background: #3f1f00; }
-  .pill-red { color: var(--danger); border-color: #7f1d1d; background: #2d0a0a; }
-  .pill-gray { color: var(--label); border-color: var(--border); background: var(--surface2); }
+/* ROWS */
+.iam-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--iam-border);
+  gap: 1rem;
+  font-size: 13px;
+}
+.iam-row:last-child { border-bottom: none; }
+.iam-row-label { color: var(--iam-muted); flex-shrink: 0; min-width: 140px; }
+.iam-row-val   { color: var(--iam-text); text-align: right; font-family: var(--iam-mono); font-size: 12px; }
+.iam-row-val.green { color: var(--iam-green); }
+.iam-row-val.amber { color: var(--iam-accent); }
+.iam-row-val.red   { color: var(--iam-red); }
+.iam-row-val.blue  { color: var(--iam-blue); }
 
-  /* SI / NO sections */
-  .si-no-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .si-list, .no-list { list-style: none; }
-  .si-list li::before { content: '✓ '; color: var(--accent3); font-weight: 600; }
-  .no-list li::before { content: '✗ '; color: var(--danger); font-weight: 600; }
-  .si-list li, .no-list li { padding: 4px 0; font-size: 13px; color: var(--label); border-bottom: 1px solid var(--border); }
-  .si-list li:last-child, .no-list li:last-child { border-bottom: none; }
-  .si-list li strong, .no-list li strong { color: var(--text); font-weight: 500; }
+/* SCOPE LABEL */
+.iam-semaforo    { font-size: 1.4rem; }
+.iam-scope-label { font-size: 13px; color: var(--iam-green); font-family: var(--iam-mono); font-weight: 600; }
 
-  /* SEMAFORO */
-  .semaforo { font-size: 1.5rem; }
-  .scope-label { font-size: 13px; color: var(--accent3); font-family: var(--mono); font-weight: 500; }
+/* NOTA */
+.iam-nota {
+  font-size: 12px;
+  color: var(--iam-muted);
+  font-family: var(--iam-mono);
+  padding: 4px 0;
+}
 
-  /* INTEGRATIONS */
-  .integration-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 6px; }
-  .int-item {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 7px 10px;
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--accent2);
-  }
-  .int-item span { display: block; font-family: var(--sans); font-size: 11px; color: var(--muted); margin-top: 2px; }
+/* INTEGRATION GRID */
+.iam-int-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 6px; }
+.iam-int-item {
+  background: var(--iam-surface2);
+  border: 1px solid var(--iam-border);
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-family: var(--iam-mono);
+  font-size: 11px;
+  color: var(--iam-blue);
+}
+.iam-int-item span { display: block; font-family: 'Inter', system-ui, sans-serif; font-size: 11px; color: var(--iam-muted); margin-top: 2px; }
 
-  /* FLASHCARDS */
-  .flashcard-section {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-top: 2px solid var(--accent);
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  .flashcard {
-    background: var(--surface2);
-    border-left: 3px solid var(--accent);
-    border-radius: 0 6px 6px 0;
-    padding: 10px 14px;
-    margin-bottom: 8px;
-    font-size: 13px;
-  }
-  .flashcard:last-child { margin-bottom: 0; }
-  .flashcard .trigger { color: var(--accent); font-family: var(--mono); font-size: 11px; font-weight: 600; display: block; margin-bottom: 3px; }
-  .flashcard .action { color: var(--label); }
-  .flashcard .action strong { color: var(--text); font-weight: 500; }
+/* SI / NO */
+.iam-si-no-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.iam-si-list, .iam-no-list { list-style: none; padding: 0; margin: 0; }
+.iam-si-list li::before { content: '✓ '; color: var(--iam-green); font-weight: 600; }
+.iam-no-list li::before { content: '✗ '; color: var(--iam-red);   font-weight: 600; }
+.iam-si-list li, .iam-no-list li {
+  padding: 4px 0;
+  font-size: 13px;
+  color: var(--iam-label);
+  border-bottom: 1px solid var(--iam-border);
+}
+.iam-si-list li:last-child, .iam-no-list li:last-child { border-bottom: none; }
+.iam-si-list li strong, .iam-no-list li strong { color: var(--iam-text); font-weight: 600; }
 
-  /* QUIZ */
-  .quiz-section {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-top: 2px solid var(--accent2);
-    border-radius: 8px;
-    padding: 1.5rem;
-  }
-  .question {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
-  }
-  .question:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-  .q-num { font-family: var(--mono); font-size: 10px; color: var(--accent2); letter-spacing: 0.1em; margin-bottom: 6px; }
-  .q-text { font-size: 14px; color: var(--text); margin-bottom: 12px; line-height: 1.6; }
-  .option {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 8px 12px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    margin-bottom: 6px;
-    cursor: pointer;
-    font-size: 13px;
-    color: var(--label);
-    transition: all 0.15s;
-    background: var(--surface2);
-  }
-  .option:hover { border-color: var(--accent2); color: var(--text); }
-  .option.correct { border-color: var(--accent3); color: var(--accent3); background: #022c22; }
-  .option.wrong { border-color: var(--danger); color: var(--danger); background: #2d0a0a; }
-  .option.revealed { pointer-events: none; }
-  .opt-letter { font-family: var(--mono); font-weight: 600; flex-shrink: 0; }
-  .explanation {
-    display: none;
-    margin-top: 10px;
-    padding: 10px 12px;
-    background: var(--bg);
-    border-left: 3px solid var(--accent3);
-    border-radius: 0 6px 6px 0;
-    font-size: 13px;
-    color: var(--label);
-    line-height: 1.6;
-  }
-  .explanation strong { color: var(--accent3); }
-  .explanation.show { display: block; }
-  .explanation.wrong-exp { border-left-color: var(--danger); }
-  .explanation.wrong-exp strong { color: var(--danger); }
+/* SECTION BREAK */
+.iam-section-break {
+  font-family: var(--iam-mono);
+  font-size: 10px;
+  color: var(--iam-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 1.5rem 0 0.6rem;
+}
 
-  /* SECTION SPACER */
-  .section-break {
-    font-family: var(--mono);
-    font-size: 10px;
-    color: var(--muted);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 1.5rem 0 0.75rem;
-  }
+/* FLASHCARDS */
+.iam-flashcard-box {
+  background: var(--iam-surface);
+  border: 1px solid var(--iam-border);
+  border-top: 3px solid var(--iam-accent);
+  border-radius: var(--iam-radius);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+.iam-flashcard {
+  background: var(--iam-surface2);
+  border-left: 3px solid var(--iam-accent);
+  border-radius: 0 6px 6px 0;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.iam-flashcard:last-child { margin-bottom: 0; }
+.iam-trigger {
+  color: var(--iam-accent);
+  font-family: var(--iam-mono);
+  font-size: 11px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 3px;
+}
+.iam-action { color: var(--iam-label); }
+.iam-action strong { color: var(--iam-text); font-weight: 600; }
 
-  /* NOTA */
-  .nota {
-    font-size: 12px;
-    color: var(--muted);
-    font-family: var(--mono);
-    padding: 4px 0;
-  }
+/* QUIZ */
+.iam-quiz-box {
+  background: var(--iam-surface);
+  border: 1px solid var(--iam-border);
+  border-top: 3px solid var(--iam-blue);
+  border-radius: var(--iam-radius);
+  padding: 1.25rem;
+}
+.iam-question {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--iam-border);
+}
+.iam-question:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.iam-q-num  { font-family: var(--iam-mono); font-size: 10px; color: var(--iam-blue); letter-spacing: 0.1em; margin-bottom: 6px; }
+.iam-q-text { font-size: 14px; color: var(--iam-text); margin-bottom: 12px; line-height: 1.65; }
+
+.iam-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid var(--iam-border);
+  border-radius: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--iam-label);
+  transition: border-color 0.15s, background 0.15s;
+  background: var(--iam-surface2);
+  user-select: none;
+}
+.iam-option:hover { border-color: var(--iam-blue); color: var(--iam-text); }
+.iam-option.correct { border-color: var(--iam-green); color: var(--iam-green); background: #ecfdf5; }
+.iam-option.wrong   { border-color: var(--iam-red);   color: var(--iam-red);   background: #fef2f2; }
+.iam-option.revealed { pointer-events: none; }
+.iam-opt-letter { font-family: var(--iam-mono); font-weight: 600; flex-shrink: 0; }
+
+.iam-explanation {
+  display: none;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #f0fdf4;
+  border-left: 3px solid var(--iam-green);
+  border-radius: 0 6px 6px 0;
+  font-size: 13px;
+  color: var(--iam-label);
+  line-height: 1.65;
+}
+.iam-explanation strong { color: var(--iam-green); }
+.iam-explanation.show { display: block; }
+.iam-explanation.wrong-exp { background: #fff1f2; border-left-color: var(--iam-red); }
+.iam-explanation.wrong-exp strong { color: var(--iam-red); }
 </style>
-</head>
-<body>
 
-<!-- HEADER -->
-<div class="header">
-  <h1>AWS <span>IAM</span></h1>
-  <div class="sub">Identity and Access Management · Ficha de Estudio SAA-C03</div>
-</div>
+<div class="iam-sheet">
 
-<!-- INTRO -->
-<div class="intro-box">
-  <strong>AWS Identity and Access Management (IAM)</strong> es el servicio centralizado de AWS para gestionar <strong>quién puede acceder a qué recursos</strong> y bajo qué condiciones. Permite crear y controlar identidades (usuarios, grupos, roles) y definir permisos granulares mediante políticas JSON. <strong>No tiene agente ni cliente instalable</strong>: opera exclusivamente a través de la API de AWS, la consola y la CLI. Clientes habituales: cualquier cuenta AWS — IAM es el punto de partida obligatorio para toda arquitectura segura. Aparece en el <strong>Dominio 1 (30%)</strong> del examen SAA-C03.
-</div>
-
-<!-- ROW 1: Categoría + Alcance + SLA -->
-<div class="grid-3">
-
-  <div class="card">
-    <div class="card-title">Categoría AWS</div>
-    <div class="row"><span class="row-label">Categoría oficial</span><span class="row-val blue">Security, Identity & Compliance</span></div>
-    <div class="row"><span class="row-label">Subcategoría</span><span class="row-val">Identity Management</span></div>
-    <div class="row"><span class="row-label">Color en diagramas</span><span class="row-val amber">Rojo / #DD344C</span></div>
-    <div class="row"><span class="row-label">Ícono oficial</span><span class="row-val">AWS IAM Icon Set</span></div>
+  <!-- HEADER -->
+  <div class="iam-header">
+    <div class="iam-breadcrumb">SAA-C03 · Dominio 1 · Seguridad</div>
+    <h1>AWS <span>IAM</span></h1>
+    <div class="iam-sub">Identity and Access Management · Ficha de Estudio SAA-C03</div>
   </div>
 
-  <div class="card">
-    <div class="card-title">Location / Alcance</div>
-    <div style="text-align:center; padding: 0.5rem 0 0.75rem;">
-      <div class="semaforo">🟢</div>
-      <div class="scope-label" style="margin-top:6px;">GLOBAL</div>
+  <!-- INTRO -->
+  <div class="iam-intro">
+    <strong>AWS Identity and Access Management (IAM)</strong> es el servicio centralizado de AWS para gestionar <strong>quién puede acceder a qué recursos</strong> y bajo qué condiciones. Permite crear y controlar identidades (usuarios, grupos, roles) y definir permisos granulares mediante políticas JSON. <strong>No tiene agente ni cliente instalable</strong>: opera exclusivamente a través de la API de AWS, la consola y la CLI. Clientes habituales: cualquier cuenta AWS — IAM es el punto de partida obligatorio para toda arquitectura segura. Aparece en el <strong>Dominio 1 (30%)</strong> del examen SAA-C03.
+  </div>
+
+  <!-- ROW 1: Categoría + Alcance + SLA -->
+  <div class="iam-grid-3">
+
+    <div class="iam-card">
+      <div class="iam-card-title">Categoría AWS</div>
+      <div class="iam-row"><span class="iam-row-label">Categoría oficial</span><span class="iam-row-val blue">Security, Identity &amp; Compliance</span></div>
+      <div class="iam-row"><span class="iam-row-label">Subcategoría</span><span class="iam-row-val">Identity Management</span></div>
+      <div class="iam-row"><span class="iam-row-label">Color en diagramas</span><span class="iam-row-val amber">Rojo / #DD344C</span></div>
+      <div class="iam-row"><span class="iam-row-label">Ícono oficial</span><span class="iam-row-val">AWS IAM Icon Set</span></div>
     </div>
-    <div class="row"><span class="row-label">Disponibilidad</span><span class="row-val green">Multi-región automático</span></div>
-    <div class="row"><span class="row-label">Replica entre regiones</span><span class="row-val green">Sí, automáticamente</span></div>
-    <div class="nota" style="margin-top:8px;">IAM no es regional: una política creada en us-east-1 aplica globalmente.</div>
-  </div>
 
-  <div class="card">
-    <div class="card-title">SLA</div>
-    <div class="row"><span class="row-label">Disponibilidad SLA</span><span class="row-val green">99.99%</span></div>
-    <div class="row"><span class="row-label">Durabilidad</span><span class="row-val">No aplica (control plane)</span></div>
-    <div class="row"><span class="row-label">Multi-AZ</span><span class="row-val green">Sí, nativo</span></div>
-    <div class="row"><span class="row-label">Replicación Cross-Region</span><span class="row-val green">Sí, automática</span></div>
-    <div class="row"><span class="row-label">SLA publicado</span><span class="row-val green">Sí</span></div>
-  </div>
-
-</div>
-
-<!-- ROW 2: Costos + Capa gratuita -->
-<div class="grid-2">
-
-  <div class="card">
-    <div class="card-title">Cost Driver</div>
-    <div class="row"><span class="row-label">IAM (usuarios, roles, políticas)</span><span class="row-val green">Gratuito</span></div>
-    <div class="row"><span class="row-label">IAM Identity Center (SSO)</span><span class="row-val green">Gratuito</span></div>
-    <div class="row"><span class="row-label">AWS STS (tokens temporales)</span><span class="row-val green">Gratuito</span></div>
-    <div class="row"><span class="row-label">AWS Organizations</span><span class="row-val green">Gratuito</span></div>
-    <div class="row"><span class="row-label">CloudTrail (auditoría IAM)</span><span class="row-val amber">Costo por evento</span></div>
-    <div class="row"><span class="row-label">Access Analyzer</span><span class="row-val amber">Costo por finding</span></div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">Capa gratuita</div>
-    <div class="row"><span class="row-label">Free Tier</span><span class="row-val green">Sí — permanente</span></div>
-    <div class="row"><span class="row-label">Usuarios IAM</span><span class="row-val green">Ilimitados, sin costo</span></div>
-    <div class="row"><span class="row-label">Roles IAM</span><span class="row-val green">Ilimitados, sin costo</span></div>
-    <div class="row"><span class="row-label">Políticas gestionadas</span><span class="row-val green">Sin costo</span></div>
-    <div class="row"><span class="row-label">Límite políticas por cuenta</span><span class="row-val amber">1 500 políticas gestionadas cliente</span></div>
-    <div class="row"><span class="row-label">Nota examen</span><span class="row-val green">IAM nunca genera costo directo</span></div>
-  </div>
-
-</div>
-
-<!-- ROW 3: Security + Escalabilidad -->
-<div class="grid-2">
-
-  <div class="card">
-    <div class="card-title">Security & Identity</div>
-    <div class="row"><span class="row-label">Cifrado en tránsito</span><span class="row-val green">TLS siempre (HTTPS)</span></div>
-    <div class="row"><span class="row-label">Cifrado en reposo</span><span class="row-val green">AES-256 (gestionado por AWS)</span></div>
-    <div class="row"><span class="row-label">MFA</span><span class="row-val green">Virtual, TOTP, FIDO2/WebAuthn</span></div>
-    <div class="row"><span class="row-label">VPC Endpoint</span><span class="row-val">No aplica (servicio global)</span></div>
-    <div class="row"><span class="row-label">Control de acceso</span><span class="row-val blue">Policy-based (JSON)</span></div>
-    <div class="row"><span class="row-label">Credenciales root</span><span class="row-val red">Solo para tareas de billing/cierre de cuenta</span></div>
-    <div class="row"><span class="row-label">Auditoría</span><span class="row-val">CloudTrail + IAM Access Analyzer</span></div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">Escalabilidad</div>
-    <div class="row"><span class="row-label">Tipo de escalado</span><span class="row-val green">Serverless / nativo</span></div>
-    <div class="row"><span class="row-label">Mecanismo</span><span class="row-val">Automático, sin intervención</span></div>
-    <div class="row"><span class="row-label">Max usuarios por cuenta</span><span class="row-val amber">5 000 (soft limit ampliable)</span></div>
-    <div class="row"><span class="row-label">Max grupos por cuenta</span><span class="row-val amber">300</span></div>
-    <div class="row"><span class="row-label">Max roles por cuenta</span><span class="row-val amber">1 000 (soft limit)</span></div>
-    <div class="row"><span class="row-label">Max políticas por entidad</span><span class="row-val amber">10 políticas gestionadas</span></div>
-    <div class="row"><span class="row-label">Tamaño máx. política inline</span><span class="row-val amber">2 048 caracteres</span></div>
-  </div>
-
-</div>
-
-<!-- ROW 4: Governance + Tipos -->
-<div class="grid-2">
-
-  <div class="card">
-    <div class="card-title">Governance</div>
-    <div class="row"><span class="row-label">Controles de seguridad</span><span class="row-val">SCPs, Permission Boundaries, Policy Conditions</span></div>
-    <div class="row"><span class="row-label">Auditoría</span><span class="row-val">CloudTrail, IAM Access Analyzer, Credential Report</span></div>
-    <div class="row"><span class="row-label">Compliance</span><span class="row-val green">SOC, PCI-DSS, HIPAA, ISO 27001</span></div>
-    <div class="row"><span class="row-label">Password policy</span><span class="row-val">Configurable por cuenta</span></div>
-    <div class="row"><span class="row-label">Credential Report</span><span class="row-val blue">CSV descargable — uso en examen</span></div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">Tipos de identidades IAM</div>
-    <div class="row"><span class="row-label">IAM User</span><span class="row-val">Persona o app con credenciales permanentes</span></div>
-    <div class="row"><span class="row-label">IAM Group</span><span class="row-val">Colección de usuarios (sin permisos propios)</span></div>
-    <div class="row"><span class="row-label">IAM Role</span><span class="row-val amber">Identidad temporal — recomendado siempre</span></div>
-    <div class="row"><span class="row-label">IAM Policy</span><span class="row-val">JSON que define Allow/Deny sobre acciones</span></div>
-    <div class="row"><span class="row-label">STS Token</span><span class="row-val">Credenciales temporales vía AssumeRole</span></div>
-    <div class="row"><span class="row-label">Service-linked role</span><span class="row-val blue">Rol gestionado por el servicio AWS</span></div>
-  </div>
-
-</div>
-
-<!-- Límites importantes -->
-<div class="card">
-  <div class="card-title">Límites importantes para el examen</div>
-  <div class="grid-3" style="margin:0; gap:0.5rem;">
-    <div>
-      <div class="row"><span class="row-label">Usuarios por cuenta</span><span class="row-val amber">5 000</span></div>
-      <div class="row"><span class="row-label">Grupos por cuenta</span><span class="row-val amber">300</span></div>
-      <div class="row"><span class="row-label">Roles por cuenta</span><span class="row-val amber">1 000</span></div>
+    <div class="iam-card">
+      <div class="iam-card-title">Location / Alcance</div>
+      <div style="text-align:center; padding: 0.5rem 0 0.75rem;">
+        <div class="iam-semaforo">🟢</div>
+        <div class="iam-scope-label" style="margin-top:6px;">GLOBAL</div>
+      </div>
+      <div class="iam-row"><span class="iam-row-label">Disponibilidad</span><span class="iam-row-val green">Multi-región automático</span></div>
+      <div class="iam-row"><span class="iam-row-label">Replica entre regiones</span><span class="iam-row-val green">Sí, automáticamente</span></div>
+      <div class="iam-nota" style="margin-top:8px;">IAM no es regional: una política creada en us-east-1 aplica globalmente.</div>
     </div>
-    <div>
-      <div class="row"><span class="row-label">Políticas gestionadas cliente</span><span class="row-val amber">1 500</span></div>
-      <div class="row"><span class="row-label">Políticas adj. por entidad</span><span class="row-val amber">10</span></div>
-      <div class="row"><span class="row-label">Tamaño policy (inline)</span><span class="row-val amber">2 048 chars</span></div>
+
+    <div class="iam-card">
+      <div class="iam-card-title">SLA</div>
+      <div class="iam-row"><span class="iam-row-label">Disponibilidad SLA</span><span class="iam-row-val green">99.99%</span></div>
+      <div class="iam-row"><span class="iam-row-label">Durabilidad</span><span class="iam-row-val">No aplica (control plane)</span></div>
+      <div class="iam-row"><span class="iam-row-label">Multi-AZ</span><span class="iam-row-val green">Sí, nativo</span></div>
+      <div class="iam-row"><span class="iam-row-label">Replicación Cross-Region</span><span class="iam-row-val green">Sí, automática</span></div>
+      <div class="iam-row"><span class="iam-row-label">SLA publicado</span><span class="iam-row-val green">Sí</span></div>
     </div>
-    <div>
-      <div class="row"><span class="row-label">Duración token STS mín.</span><span class="row-val">15 minutos</span></div>
-      <div class="row"><span class="row-label">Duración token STS máx.</span><span class="row-val amber">12 horas (roles)</span></div>
-      <div class="row"><span class="row-label">SCPs aplican a</span><span class="row-val blue">Cuentas miembro (no root de org)</span></div>
+
+  </div>
+
+  <!-- ROW 2: Costos + Capa gratuita -->
+  <div class="iam-grid-2">
+
+    <div class="iam-card">
+      <div class="iam-card-title">Cost Driver</div>
+      <div class="iam-row"><span class="iam-row-label">IAM (usuarios, roles, políticas)</span><span class="iam-row-val green">Gratuito</span></div>
+      <div class="iam-row"><span class="iam-row-label">IAM Identity Center (SSO)</span><span class="iam-row-val green">Gratuito</span></div>
+      <div class="iam-row"><span class="iam-row-label">AWS STS (tokens temporales)</span><span class="iam-row-val green">Gratuito</span></div>
+      <div class="iam-row"><span class="iam-row-label">AWS Organizations</span><span class="iam-row-val green">Gratuito</span></div>
+      <div class="iam-row"><span class="iam-row-label">CloudTrail (auditoría IAM)</span><span class="iam-row-val amber">Costo por evento</span></div>
+      <div class="iam-row"><span class="iam-row-label">Access Analyzer</span><span class="iam-row-val amber">Costo por finding</span></div>
     </div>
-  </div>
-</div>
 
-<!-- Resiliencia -->
-<div class="card">
-  <div class="card-title">Resiliencia / Recuperación</div>
-  <div class="grid-2" style="margin:0; gap:0.5rem;">
-    <div>
-      <div class="row"><span class="row-label">Multi-AZ</span><span class="row-val green">Sí, automático</span></div>
-      <div class="row"><span class="row-label">Replicación</span><span class="row-val green">Global automática</span></div>
-      <div class="row"><span class="row-label">Versionado de políticas</span><span class="row-val green">Sí — hasta 5 versiones por política</span></div>
+    <div class="iam-card">
+      <div class="iam-card-title">Capa gratuita</div>
+      <div class="iam-row"><span class="iam-row-label">Free Tier</span><span class="iam-row-val green">Sí — permanente</span></div>
+      <div class="iam-row"><span class="iam-row-label">Usuarios IAM</span><span class="iam-row-val green">Ilimitados, sin costo</span></div>
+      <div class="iam-row"><span class="iam-row-label">Roles IAM</span><span class="iam-row-val green">Ilimitados, sin costo</span></div>
+      <div class="iam-row"><span class="iam-row-label">Políticas gestionadas</span><span class="iam-row-val green">Sin costo</span></div>
+      <div class="iam-row"><span class="iam-row-label">Límite políticas por cuenta</span><span class="iam-row-val amber">1 500 políticas gestionadas cliente</span></div>
+      <div class="iam-row"><span class="iam-row-label">Nota examen</span><span class="iam-row-val green">IAM nunca genera costo directo</span></div>
     </div>
-    <div>
-      <div class="row"><span class="row-label">Cross-Region</span><span class="row-val green">Automático (servicio global)</span></div>
-      <div class="row"><span class="row-label">RPO</span><span class="row-val">No aplica (control plane)</span></div>
-      <div class="row"><span class="row-label">RTO</span><span class="row-val">No aplica (siempre disponible)</span></div>
+
+  </div>
+
+  <!-- ROW 3: Security + Escalabilidad -->
+  <div class="iam-grid-2">
+
+    <div class="iam-card">
+      <div class="iam-card-title">Security &amp; Identity</div>
+      <div class="iam-row"><span class="iam-row-label">Cifrado en tránsito</span><span class="iam-row-val green">TLS siempre (HTTPS)</span></div>
+      <div class="iam-row"><span class="iam-row-label">Cifrado en reposo</span><span class="iam-row-val green">AES-256 (gestionado por AWS)</span></div>
+      <div class="iam-row"><span class="iam-row-label">MFA</span><span class="iam-row-val green">Virtual, TOTP, FIDO2/WebAuthn</span></div>
+      <div class="iam-row"><span class="iam-row-label">VPC Endpoint</span><span class="iam-row-val">No aplica (servicio global)</span></div>
+      <div class="iam-row"><span class="iam-row-label">Control de acceso</span><span class="iam-row-val blue">Policy-based (JSON)</span></div>
+      <div class="iam-row"><span class="iam-row-label">Credenciales root</span><span class="iam-row-val red">Solo para tareas de billing/cierre de cuenta</span></div>
+      <div class="iam-row"><span class="iam-row-label">Auditoría</span><span class="iam-row-val">CloudTrail + IAM Access Analyzer</span></div>
     </div>
-  </div>
-</div>
 
-<!-- Performance -->
-<div class="card">
-  <div class="card-title">Performance / Rendimiento</div>
-  <div class="row"><span class="row-label">Latencia de evaluación de políticas</span><span class="row-val green">Milisegundos — no configurable</span></div>
-  <div class="row"><span class="row-label">Optimización principal</span><span class="row-val">Usar roles sobre usuarios; evitar políticas inline excesivas</span></div>
-  <div class="row"><span class="row-label">Policy evaluation order</span><span class="row-val amber">Deny explícito &gt; Allow &gt; Deny implícito</span></div>
-  <div class="row"><span class="row-label">Caching de credentials</span><span class="row-val">SDK/CLI cachean tokens STS localmente</span></div>
-</div>
-
-<!-- Integraciones -->
-<div class="card">
-  <div class="card-title">Integraciones importantes</div>
-  <div class="integration-grid">
-    <div class="int-item">AWS STS<span>Tokens temporales</span></div>
-    <div class="int-item">Organizations<span>SCPs multi-cuenta</span></div>
-    <div class="int-item">IAM Identity Center<span>SSO / federation</span></div>
-    <div class="int-item">CloudTrail<span>Auditoría de llamadas</span></div>
-    <div class="int-item">EC2<span>Instance profiles</span></div>
-    <div class="int-item">Lambda<span>Execution roles</span></div>
-    <div class="int-item">S3<span>Bucket policies + IAM</span></div>
-    <div class="int-item">KMS<span>Key policies + IAM</span></div>
-    <div class="int-item">Cognito<span>Identity federation</span></div>
-    <div class="int-item">Control Tower<span>Governance multi-cuenta</span></div>
-    <div class="int-item">Config<span>Compliance rules</span></div>
-    <div class="int-item">Access Analyzer<span>Least privilege audit</span></div>
-  </div>
-</div>
-
-<!-- Servicios similares -->
-<div class="card">
-  <div class="card-title">Servicios similares / alternativas</div>
-  <div class="row"><span class="row-label">IAM Identity Center</span><span class="row-val blue">SSO centralizado para múltiples cuentas/apps — reemplaza SAML directo con IAM</span></div>
-  <div class="row"><span class="row-label">Amazon Cognito</span><span class="row-val blue">Gestión de identidades para usuarios finales de apps (no para acceso a AWS)</span></div>
-  <div class="row"><span class="row-label">AWS Directory Service</span><span class="row-val">AD gestionado — federación con IAM en entornos Microsoft</span></div>
-  <div class="row"><span class="row-label">AWS Control Tower</span><span class="row-val">Governance y guardrails multi-cuenta — usa IAM + Organizations internamente</span></div>
-</div>
-
-<!-- Casos de uso SI / NO -->
-<div class="card">
-  <div class="card-title">Casos de uso — Los SÍ y los NO</div>
-  <div class="si-no-grid">
-    <div>
-      <div style="font-family:var(--mono);font-size:10px;color:var(--accent3);letter-spacing:0.1em;margin-bottom:8px;">CUÁNDO SÍ USAR IAM</div>
-      <ul class="si-list">
-        <li><strong>Acceso programático</strong> a servicios AWS desde EC2/Lambda</li>
-        <li><strong>Cross-account access</strong> con roles y STS AssumeRole</li>
-        <li><strong>Least privilege</strong> en arquitecturas multi-servicio</li>
-        <li><strong>Federación</strong> con IdP corporativo (SAML 2.0, OIDC)</li>
-        <li><strong>Control granular</strong> sobre recursos AWS específicos</li>
-        <li><strong>Service-to-service</strong> auth dentro de AWS</li>
-      </ul>
+    <div class="iam-card">
+      <div class="iam-card-title">Escalabilidad</div>
+      <div class="iam-row"><span class="iam-row-label">Tipo de escalado</span><span class="iam-row-val green">Serverless / nativo</span></div>
+      <div class="iam-row"><span class="iam-row-label">Mecanismo</span><span class="iam-row-val">Automático, sin intervención</span></div>
+      <div class="iam-row"><span class="iam-row-label">Max usuarios por cuenta</span><span class="iam-row-val amber">5 000 (soft limit ampliable)</span></div>
+      <div class="iam-row"><span class="iam-row-label">Max grupos por cuenta</span><span class="iam-row-val amber">300</span></div>
+      <div class="iam-row"><span class="iam-row-label">Max roles por cuenta</span><span class="iam-row-val amber">1 000 (soft limit)</span></div>
+      <div class="iam-row"><span class="iam-row-label">Max políticas por entidad</span><span class="iam-row-val amber">10 políticas gestionadas</span></div>
+      <div class="iam-row"><span class="iam-row-label">Tamaño máx. política inline</span><span class="iam-row-val amber">2 048 caracteres</span></div>
     </div>
-    <div>
-      <div style="font-family:var(--mono);font-size:10px;color:var(--danger);letter-spacing:0.1em;margin-bottom:8px;">CUÁNDO NO / ANTI-PATTERNS</div>
-      <ul class="no-list">
-        <li><strong>Usuarios de apps móviles/web</strong> → usar Cognito</li>
-        <li><strong>Hardcodear credenciales</strong> en código → usar roles</li>
-        <li><strong>Credenciales de larga duración</strong> en EC2 → usar instance profiles</li>
-        <li><strong>SSO entre múltiples cuentas</strong> → usar IAM Identity Center</li>
-        <li><strong>AD/LDAP corporativo</strong> complejo → Directory Service</li>
-        <li><strong>Usuario root para tareas diarias</strong> → nunca</li>
-      </ul>
+
+  </div>
+
+  <!-- ROW 4: Governance + Tipos -->
+  <div class="iam-grid-2">
+
+    <div class="iam-card">
+      <div class="iam-card-title">Governance</div>
+      <div class="iam-row"><span class="iam-row-label">Controles de seguridad</span><span class="iam-row-val">SCPs, Permission Boundaries, Policy Conditions</span></div>
+      <div class="iam-row"><span class="iam-row-label">Auditoría</span><span class="iam-row-val">CloudTrail, IAM Access Analyzer, Credential Report</span></div>
+      <div class="iam-row"><span class="iam-row-label">Compliance</span><span class="iam-row-val green">SOC, PCI-DSS, HIPAA, ISO 27001</span></div>
+      <div class="iam-row"><span class="iam-row-label">Password policy</span><span class="iam-row-val">Configurable por cuenta</span></div>
+      <div class="iam-row"><span class="iam-row-label">Credential Report</span><span class="iam-row-val blue">CSV descargable — uso en examen</span></div>
     </div>
-  </div>
-</div>
 
-<!-- FLASHCARDS -->
-<div class="section-break">Flashcard de Memoria Crítica</div>
-<div class="flashcard-section">
-  <div class="card-title">Trigger → Action · Memorizar para el examen</div>
+    <div class="iam-card">
+      <div class="iam-card-title">Tipos de identidades IAM</div>
+      <div class="iam-row"><span class="iam-row-label">IAM User</span><span class="iam-row-val">Persona o app con credenciales permanentes</span></div>
+      <div class="iam-row"><span class="iam-row-label">IAM Group</span><span class="iam-row-val">Colección de usuarios (sin permisos propios)</span></div>
+      <div class="iam-row"><span class="iam-row-label">IAM Role</span><span class="iam-row-val amber">Identidad temporal — recomendado siempre</span></div>
+      <div class="iam-row"><span class="iam-row-label">IAM Policy</span><span class="iam-row-val">JSON que define Allow/Deny sobre acciones</span></div>
+      <div class="iam-row"><span class="iam-row-label">STS Token</span><span class="iam-row-val">Credenciales temporales vía AssumeRole</span></div>
+      <div class="iam-row"><span class="iam-row-label">Service-linked role</span><span class="iam-row-val blue">Rol gestionado por el servicio AWS</span></div>
+    </div>
 
-  <div class="flashcard">
-    <span class="trigger">DENY EXPLÍCITO</span>
-    <span class="action">Si hay un <strong>Deny explícito en cualquier política</strong>, gana siempre. No importa cuántos Allow haya. Orden: Deny explícito &gt; Allow &gt; Deny implícito (default).</span>
-  </div>
-
-  <div class="flashcard">
-    <span class="trigger">EC2 NECESITA ACCEDER A S3/DynamoDB</span>
-    <span class="action">Asignar <strong>IAM Role con Instance Profile</strong>. Nunca credenciales hardcodeadas ni access keys en la instancia.</span>
   </div>
 
-  <div class="flashcard">
-    <span class="trigger">ACCESO ENTRE CUENTAS AWS</span>
-    <span class="action">IAM Role en cuenta destino + <strong>STS AssumeRole</strong> desde cuenta origen. Nunca compartir credenciales entre cuentas.</span>
-  </div>
-
-  <div class="flashcard">
-    <span class="trigger">RESTRINGIR ACCIONES EN CUENTAS HIJAS DE ORGANIZATION</span>
-    <span class="action"><strong>Service Control Policies (SCPs)</strong> en AWS Organizations. Las SCPs NO otorgan permisos, solo los limitan. No aplican a la cuenta master/management.</span>
-  </div>
-
-  <div class="flashcard">
-    <span class="trigger">FEDERAR USUARIOS CORPORATIVOS (AD / SAML)</span>
-    <span class="action"><strong>IAM Identity Center</strong> (antes SSO) para múltiples cuentas. IAM directo con SAML 2.0 para una sola cuenta. Cognito para usuarios finales de aplicaciones.</span>
-  </div>
-
-  <div class="flashcard">
-    <span class="trigger">AUDITAR QUIÉN HIZO QUÉ EN AWS</span>
-    <span class="action"><strong>AWS CloudTrail</strong> — registra todas las llamadas API de IAM. IAM Access Analyzer detecta acceso externo no intencionado a recursos.</span>
-  </div>
-
-  <div class="flashcard">
-    <span class="trigger">PERMISSION BOUNDARY</span>
-    <span class="action">Límite máximo de permisos que un usuario/rol puede tener. <strong>No otorga permisos</strong>, define el techo. Útil para delegar creación de roles a developers sin escalada de privilegios.</span>
-  </div>
-
-  <div class="flashcard">
-    <span class="trigger">POLÍTICA INLINE vs POLÍTICA GESTIONADA</span>
-    <span class="action">Inline: adjunta a una sola entidad, se borra con ella. Gestionada: reutilizable, versionable. <strong>Best practice: siempre política gestionada</strong> (customer managed &gt; AWS managed para control).</span>
-  </div>
-
-  <div class="flashcard">
-    <span class="trigger">TOKEN STS EXPIRADO / CREDENCIALES TEMPORALES</span>
-    <span class="action">Duración: 15 min – 12 horas para roles. <strong>No hay RPO/RTO</strong> — IAM es global y altamente disponible. Si expiran, la app debe volver a llamar AssumeRole.</span>
-  </div>
-
-  <div class="flashcard">
-    <span class="trigger">USUARIO ROOT</span>
-    <span class="action">Solo para: cerrar la cuenta, cambiar el plan de soporte, gestionar billing root, recuperar acceso bloqueado. <strong>Proteger con MFA obligatorio.</strong> Nunca para operaciones del día a día.</span>
-  </div>
-</div>
-
-<!-- QUIZ -->
-<div class="section-break">Cuestionario Rápido — 5 Preguntas Tipo Examen SAA-C03</div>
-<div class="quiz-section">
-  <div class="card-title">Validación de retención · IAM</div>
-
-  <div class="question" id="q1">
-    <div class="q-num">PREGUNTA 01 / 05</div>
-    <div class="q-text">Una empresa tiene una aplicación en EC2 que necesita leer objetos de S3 y escribir en DynamoDB. Un desarrollador propone crear un usuario IAM con access key y hardcodearla en el código. ¿Cuál es la solución correcta según los best practices de AWS?</div>
-    <div class="option" onclick="answer(this,'q1','wrong')"><span class="opt-letter">A</span> Crear un usuario IAM con acceso programático y rotar las credenciales cada 90 días</div>
-    <div class="option" onclick="answer(this,'q1','wrong')"><span class="opt-letter">B</span> Almacenar las credenciales en AWS Secrets Manager y recuperarlas desde el código</div>
-    <div class="option" onclick="answer(this,'q1','correct')"><span class="opt-letter">C</span> Crear un IAM Role con los permisos necesarios y asignarlo a la instancia EC2 como Instance Profile</div>
-    <div class="option" onclick="answer(this,'q1','wrong')"><span class="opt-letter">D</span> Usar credenciales de root con MFA habilitado para mayor seguridad</div>
-    <div class="explanation" id="exp-q1">
-      <strong>Correcta: C.</strong> Los IAM Roles con Instance Profiles proveen credenciales temporales automáticamente rotadas por STS. No requieren gestión manual de secretos. Las opciones A y B siguen exponiendo credenciales de larga duración. La opción D viola el principio básico de nunca usar root para operaciones.
+  <!-- Límites importantes -->
+  <div class="iam-card">
+    <div class="iam-card-title">Límites importantes para el examen</div>
+    <div class="iam-grid-3" style="margin:0; gap:0.5rem;">
+      <div>
+        <div class="iam-row"><span class="iam-row-label">Usuarios por cuenta</span><span class="iam-row-val amber">5 000</span></div>
+        <div class="iam-row"><span class="iam-row-label">Grupos por cuenta</span><span class="iam-row-val amber">300</span></div>
+        <div class="iam-row"><span class="iam-row-label">Roles por cuenta</span><span class="iam-row-val amber">1 000</span></div>
+      </div>
+      <div>
+        <div class="iam-row"><span class="iam-row-label">Políticas gestionadas cliente</span><span class="iam-row-val amber">1 500</span></div>
+        <div class="iam-row"><span class="iam-row-label">Políticas adj. por entidad</span><span class="iam-row-val amber">10</span></div>
+        <div class="iam-row"><span class="iam-row-label">Tamaño policy (inline)</span><span class="iam-row-val amber">2 048 chars</span></div>
+      </div>
+      <div>
+        <div class="iam-row"><span class="iam-row-label">Duración token STS mín.</span><span class="iam-row-val">15 minutos</span></div>
+        <div class="iam-row"><span class="iam-row-label">Duración token STS máx.</span><span class="iam-row-val amber">12 horas (roles)</span></div>
+        <div class="iam-row"><span class="iam-row-label">SCPs aplican a</span><span class="iam-row-val blue">Cuentas miembro (no root de org)</span></div>
+      </div>
     </div>
   </div>
 
-  <div class="question" id="q2">
-    <div class="q-num">PREGUNTA 02 / 05</div>
-    <div class="q-text">Una organización usa AWS Organizations con múltiples cuentas. El equipo de seguridad quiere asegurarse de que ninguna cuenta hija pueda crear recursos fuera de la región eu-west-1, incluso si un administrador de esa cuenta lo intenta. ¿Cuál es el mecanismo correcto?</div>
-    <div class="option" onclick="answer(this,'q2','wrong')"><span class="opt-letter">A</span> Crear una política IAM en cada cuenta que deniegue acciones fuera de eu-west-1</div>
-    <div class="option" onclick="answer(this,'q2','correct')"><span class="opt-letter">B</span> Aplicar una Service Control Policy (SCP) en la OU que restrinja a eu-west-1</div>
-    <div class="option" onclick="answer(this,'q2','wrong')"><span class="opt-letter">C</span> Usar IAM Permission Boundaries en todos los usuarios de las cuentas hijas</div>
-    <div class="option" onclick="answer(this,'q2','wrong')"><span class="opt-letter">D</span> Configurar AWS Config rules para detectar y remediar recursos fuera de la región</div>
-    <div class="explanation" id="exp-q2">
-      <strong>Correcta: B.</strong> Las SCPs son el único mecanismo que restringe permisos a nivel de cuenta completa, incluyendo al administrador. Una SCP en la OU aplica a todos los usuarios y roles de todas las cuentas hijas. La opción A es eludible por el admin. La opción C requiere intervención en cada usuario. Config detecta pero no previene.
+  <!-- Resiliencia -->
+  <div class="iam-card">
+    <div class="iam-card-title">Resiliencia / Recuperación</div>
+    <div class="iam-grid-2" style="margin:0; gap:0.5rem;">
+      <div>
+        <div class="iam-row"><span class="iam-row-label">Multi-AZ</span><span class="iam-row-val green">Sí, automático</span></div>
+        <div class="iam-row"><span class="iam-row-label">Replicación</span><span class="iam-row-val green">Global automática</span></div>
+        <div class="iam-row"><span class="iam-row-label">Versionado de políticas</span><span class="iam-row-val green">Sí — hasta 5 versiones por política</span></div>
+      </div>
+      <div>
+        <div class="iam-row"><span class="iam-row-label">Cross-Region</span><span class="iam-row-val green">Automático (servicio global)</span></div>
+        <div class="iam-row"><span class="iam-row-label">RPO</span><span class="iam-row-val">No aplica (control plane)</span></div>
+        <div class="iam-row"><span class="iam-row-label">RTO</span><span class="iam-row-val">No aplica (siempre disponible)</span></div>
+      </div>
     </div>
   </div>
 
-  <div class="question" id="q3">
-    <div class="q-num">PREGUNTA 03 / 05</div>
-    <div class="q-text">Un usuario IAM tiene una política adjunta que permite s3:GetObject en todos los buckets. Existe además una policy de bucket en S3 que explícitamente deniega s3:GetObject a ese usuario. ¿Cuál es el resultado cuando el usuario intenta leer un objeto?</div>
-    <div class="option" onclick="answer(this,'q3','wrong')"><span class="opt-letter">A</span> Acceso permitido porque la política IAM del usuario tiene prioridad sobre la bucket policy</div>
-    <div class="option" onclick="answer(this,'q3','correct')"><span class="opt-letter">B</span> Acceso denegado porque el Deny explícito en la bucket policy prevalece sobre el Allow</div>
-    <div class="option" onclick="answer(this,'q3','wrong')"><span class="opt-letter">C</span> Acceso permitido porque las políticas IAM siempre superan las políticas de recursos</div>
-    <div class="option" onclick="answer(this,'q3','wrong')"><span class="opt-letter">D</span> Depende del orden en que se evaluaron las políticas</div>
-    <div class="explanation" id="exp-q3">
-      <strong>Correcta: B.</strong> El Deny explícito siempre gana, sin importar el origen de la política (IAM, bucket policy, SCP). La lógica de evaluación de AWS es: 1) Deny explícito → acceso denegado. 2) Allow → acceso permitido. 3) Ningún Allow → Deny implícito. No existe prioridad por tipo de política.
+  <!-- Performance -->
+  <div class="iam-card">
+    <div class="iam-card-title">Performance / Rendimiento</div>
+    <div class="iam-row"><span class="iam-row-label">Latencia de evaluación de políticas</span><span class="iam-row-val green">Milisegundos — no configurable</span></div>
+    <div class="iam-row"><span class="iam-row-label">Optimización principal</span><span class="iam-row-val">Usar roles sobre usuarios; evitar políticas inline excesivas</span></div>
+    <div class="iam-row"><span class="iam-row-label">Policy evaluation order</span><span class="iam-row-val amber">Deny explícito &gt; Allow &gt; Deny implícito</span></div>
+    <div class="iam-row"><span class="iam-row-label">Caching de credentials</span><span class="iam-row-val">SDK/CLI cachean tokens STS localmente</span></div>
+  </div>
+
+  <!-- Integraciones -->
+  <div class="iam-card">
+    <div class="iam-card-title">Integraciones importantes</div>
+    <div class="iam-int-grid">
+      <div class="iam-int-item">AWS STS<span>Tokens temporales</span></div>
+      <div class="iam-int-item">Organizations<span>SCPs multi-cuenta</span></div>
+      <div class="iam-int-item">IAM Identity Center<span>SSO / federation</span></div>
+      <div class="iam-int-item">CloudTrail<span>Auditoría de llamadas</span></div>
+      <div class="iam-int-item">EC2<span>Instance profiles</span></div>
+      <div class="iam-int-item">Lambda<span>Execution roles</span></div>
+      <div class="iam-int-item">S3<span>Bucket policies + IAM</span></div>
+      <div class="iam-int-item">KMS<span>Key policies + IAM</span></div>
+      <div class="iam-int-item">Cognito<span>Identity federation</span></div>
+      <div class="iam-int-item">Control Tower<span>Governance multi-cuenta</span></div>
+      <div class="iam-int-item">Config<span>Compliance rules</span></div>
+      <div class="iam-int-item">Access Analyzer<span>Least privilege audit</span></div>
     </div>
   </div>
 
-  <div class="question" id="q4">
-    <div class="q-num">PREGUNTA 04 / 05</div>
-    <div class="q-text">Una empresa quiere que sus empleados accedan a múltiples cuentas AWS usando sus credenciales corporativas de Active Directory, sin crear usuarios IAM individuales. ¿Qué solución es la más adecuada?</div>
-    <div class="option" onclick="answer(this,'q4','wrong')"><span class="opt-letter">A</span> Crear usuarios IAM en cada cuenta y configurar federación SAML con AD directamente</div>
-    <div class="option" onclick="answer(this,'q4','wrong')"><span class="opt-letter">B</span> Usar Amazon Cognito con User Pools conectado al AD corporativo</div>
-    <div class="option" onclick="answer(this,'q4','correct')"><span class="opt-letter">C</span> Implementar AWS IAM Identity Center conectado al AD corporativo mediante AWS Directory Service</div>
-    <div class="option" onclick="answer(this,'q4','wrong')"><span class="opt-letter">D</span> Compartir una IAM Role entre todas las cuentas usando cross-account access con STS</div>
-    <div class="explanation" id="exp-q4">
-      <strong>Correcta: C.</strong> IAM Identity Center (antes AWS SSO) está diseñado exactamente para este escenario: acceso centralizado a múltiples cuentas con identidades federadas desde AD. Cognito (B) es para usuarios de aplicaciones, no para acceso a la consola AWS. La opción A funciona pero es compleja y no escala bien a múltiples cuentas.
+  <!-- Servicios similares -->
+  <div class="iam-card">
+    <div class="iam-card-title">Servicios similares / alternativas</div>
+    <div class="iam-row"><span class="iam-row-label">IAM Identity Center</span><span class="iam-row-val blue">SSO centralizado para múltiples cuentas/apps — reemplaza SAML directo con IAM</span></div>
+    <div class="iam-row"><span class="iam-row-label">Amazon Cognito</span><span class="iam-row-val blue">Gestión de identidades para usuarios finales de apps (no para acceso a AWS)</span></div>
+    <div class="iam-row"><span class="iam-row-label">AWS Directory Service</span><span class="iam-row-val">AD gestionado — federación con IAM en entornos Microsoft</span></div>
+    <div class="iam-row"><span class="iam-row-label">AWS Control Tower</span><span class="iam-row-val">Governance y guardrails multi-cuenta — usa IAM + Organizations internamente</span></div>
+  </div>
+
+  <!-- Casos de uso SI / NO -->
+  <div class="iam-card">
+    <div class="iam-card-title">Casos de uso — Los SÍ y los NO</div>
+    <div class="iam-si-no-grid">
+      <div>
+        <div style="font-family:var(--iam-mono);font-size:10px;color:var(--iam-green);letter-spacing:0.1em;margin-bottom:8px;text-transform:uppercase;">Cuándo sí usar IAM</div>
+        <ul class="iam-si-list">
+          <li><strong>Acceso programático</strong> a servicios AWS desde EC2/Lambda</li>
+          <li><strong>Cross-account access</strong> con roles y STS AssumeRole</li>
+          <li><strong>Least privilege</strong> en arquitecturas multi-servicio</li>
+          <li><strong>Federación</strong> con IdP corporativo (SAML 2.0, OIDC)</li>
+          <li><strong>Control granular</strong> sobre recursos AWS específicos</li>
+          <li><strong>Service-to-service</strong> auth dentro de AWS</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family:var(--iam-mono);font-size:10px;color:var(--iam-red);letter-spacing:0.1em;margin-bottom:8px;text-transform:uppercase;">Cuándo no / Anti-patterns</div>
+        <ul class="iam-no-list">
+          <li><strong>Usuarios de apps móviles/web</strong> → usar Cognito</li>
+          <li><strong>Hardcodear credenciales</strong> en código → usar roles</li>
+          <li><strong>Credenciales de larga duración</strong> en EC2 → usar instance profiles</li>
+          <li><strong>SSO entre múltiples cuentas</strong> → usar IAM Identity Center</li>
+          <li><strong>AD/LDAP corporativo</strong> complejo → Directory Service</li>
+          <li><strong>Usuario root para tareas diarias</strong> → nunca</li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <div class="question" id="q5">
-    <div class="q-num">PREGUNTA 05 / 05</div>
-    <div class="q-text">Un equipo de desarrollo necesita poder crear roles IAM para sus aplicaciones, pero el equipo de seguridad quiere asegurarse de que esos roles nunca tengan más permisos que un conjunto definido. ¿Qué característica de IAM permite esto?</div>
-    <div class="option" onclick="answer(this,'q5','wrong')"><span class="opt-letter">A</span> SCPs aplicadas a la cuenta del equipo de desarrollo</div>
-    <div class="option" onclick="answer(this,'q5','correct')"><span class="opt-letter">B</span> IAM Permission Boundaries definidas por el equipo de seguridad y requeridas en los roles</div>
-    <div class="option" onclick="answer(this,'q5','wrong')"><span class="opt-letter">C</span> Políticas IAM gestionadas por AWS (AWS Managed Policies)</div>
-    <div class="option" onclick="answer(this,'q5','wrong')"><span class="opt-letter">D</span> IAM Access Analyzer para detectar permisos excesivos automáticamente</div>
-    <div class="explanation" id="exp-q5">
-      <strong>Correcta: B.</strong> Los Permission Boundaries definen el máximo de permisos que una entidad puede tener, independientemente de las políticas que se le adjunten. Permiten delegar la creación de roles a developers sin riesgo de escalada de privilegios. Las SCPs (A) aplican a cuentas completas. Access Analyzer (D) detecta pero no previene.
+  <!-- FLASHCARDS -->
+  <div class="iam-section-break">Flashcard de Memoria Crítica</div>
+  <div class="iam-flashcard-box">
+    <div class="iam-card-title">Trigger → Action · Memorizar para el examen</div>
+
+    <div class="iam-flashcard">
+      <span class="iam-trigger">DENY EXPLÍCITO</span>
+      <span class="iam-action">Si hay un <strong>Deny explícito en cualquier política</strong>, gana siempre. No importa cuántos Allow haya. Orden: Deny explícito &gt; Allow &gt; Deny implícito (default).</span>
+    </div>
+
+    <div class="iam-flashcard">
+      <span class="iam-trigger">EC2 NECESITA ACCEDER A S3/DynamoDB</span>
+      <span class="iam-action">Asignar <strong>IAM Role con Instance Profile</strong>. Nunca credenciales hardcodeadas ni access keys en la instancia.</span>
+    </div>
+
+    <div class="iam-flashcard">
+      <span class="iam-trigger">ACCESO ENTRE CUENTAS AWS</span>
+      <span class="iam-action">IAM Role en cuenta destino + <strong>STS AssumeRole</strong> desde cuenta origen. Nunca compartir credenciales entre cuentas.</span>
+    </div>
+
+    <div class="iam-flashcard">
+      <span class="iam-trigger">RESTRINGIR ACCIONES EN CUENTAS HIJAS DE ORGANIZATION</span>
+      <span class="iam-action"><strong>Service Control Policies (SCPs)</strong> en AWS Organizations. Las SCPs NO otorgan permisos, solo los limitan. No aplican a la cuenta master/management.</span>
+    </div>
+
+    <div class="iam-flashcard">
+      <span class="iam-trigger">FEDERAR USUARIOS CORPORATIVOS (AD / SAML)</span>
+      <span class="iam-action"><strong>IAM Identity Center</strong> (antes SSO) para múltiples cuentas. IAM directo con SAML 2.0 para una sola cuenta. Cognito para usuarios finales de aplicaciones.</span>
+    </div>
+
+    <div class="iam-flashcard">
+      <span class="iam-trigger">AUDITAR QUIÉN HIZO QUÉ EN AWS</span>
+      <span class="iam-action"><strong>AWS CloudTrail</strong> — registra todas las llamadas API de IAM. IAM Access Analyzer detecta acceso externo no intencionado a recursos.</span>
+    </div>
+
+    <div class="iam-flashcard">
+      <span class="iam-trigger">PERMISSION BOUNDARY</span>
+      <span class="iam-action">Límite máximo de permisos que un usuario/rol puede tener. <strong>No otorga permisos</strong>, define el techo. Útil para delegar creación de roles a developers sin escalada de privilegios.</span>
+    </div>
+
+    <div class="iam-flashcard">
+      <span class="iam-trigger">POLÍTICA INLINE vs POLÍTICA GESTIONADA</span>
+      <span class="iam-action">Inline: adjunta a una sola entidad, se borra con ella. Gestionada: reutilizable, versionable. <strong>Best practice: siempre política gestionada</strong> (customer managed &gt; AWS managed para control).</span>
+    </div>
+
+    <div class="iam-flashcard">
+      <span class="iam-trigger">TOKEN STS EXPIRADO / CREDENCIALES TEMPORALES</span>
+      <span class="iam-action">Duración: 15 min – 12 horas para roles. <strong>No hay RPO/RTO</strong> — IAM es global y altamente disponible. Si expiran, la app debe volver a llamar AssumeRole.</span>
+    </div>
+
+    <div class="iam-flashcard">
+      <span class="iam-trigger">USUARIO ROOT</span>
+      <span class="iam-action">Solo para: cerrar la cuenta, cambiar el plan de soporte, gestionar billing root, recuperar acceso bloqueado. <strong>Proteger con MFA obligatorio.</strong> Nunca para operaciones del día a día.</span>
     </div>
   </div>
 
-</div>
+  <!-- QUIZ -->
+  <div class="iam-section-break">Cuestionario Rápido — 5 Preguntas Tipo Examen SAA-C03</div>
+  <div class="iam-quiz-box">
+    <div class="iam-card-title">Validación de retención · IAM</div>
+
+    <div class="iam-question" id="iam-q1">
+      <div class="iam-q-num">PREGUNTA 01 / 05</div>
+      <div class="iam-q-text">Una empresa tiene una aplicación en EC2 que necesita leer objetos de S3 y escribir en DynamoDB. Un desarrollador propone crear un usuario IAM con access key y hardcodearla en el código. ¿Cuál es la solución correcta según los best practices de AWS?</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q1','wrong')"><span class="iam-opt-letter">A</span> Crear un usuario IAM con acceso programático y rotar las credenciales cada 90 días</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q1','wrong')"><span class="iam-opt-letter">B</span> Almacenar las credenciales en AWS Secrets Manager y recuperarlas desde el código</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q1','correct')"><span class="iam-opt-letter">C</span> Crear un IAM Role con los permisos necesarios y asignarlo a la instancia EC2 como Instance Profile</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q1','wrong')"><span class="iam-opt-letter">D</span> Usar credenciales de root con MFA habilitado para mayor seguridad</div>
+      <div class="iam-explanation" id="iam-exp-q1">
+        <strong>Correcta: C.</strong> Los IAM Roles con Instance Profiles proveen credenciales temporales automáticamente rotadas por STS. No requieren gestión manual de secretos. Las opciones A y B siguen exponiendo credenciales de larga duración. La opción D viola el principio básico de nunca usar root para operaciones.
+      </div>
+    </div>
+
+    <div class="iam-question" id="iam-q2">
+      <div class="iam-q-num">PREGUNTA 02 / 05</div>
+      <div class="iam-q-text">Una organización usa AWS Organizations con múltiples cuentas. El equipo de seguridad quiere asegurarse de que ninguna cuenta hija pueda crear recursos fuera de la región eu-west-1, incluso si un administrador de esa cuenta lo intenta. ¿Cuál es el mecanismo correcto?</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q2','wrong')"><span class="iam-opt-letter">A</span> Crear una política IAM en cada cuenta que deniegue acciones fuera de eu-west-1</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q2','correct')"><span class="iam-opt-letter">B</span> Aplicar una Service Control Policy (SCP) en la OU que restrinja a eu-west-1</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q2','wrong')"><span class="iam-opt-letter">C</span> Usar IAM Permission Boundaries en todos los usuarios de las cuentas hijas</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q2','wrong')"><span class="iam-opt-letter">D</span> Configurar AWS Config rules para detectar y remediar recursos fuera de la región</div>
+      <div class="iam-explanation" id="iam-exp-q2">
+        <strong>Correcta: B.</strong> Las SCPs son el único mecanismo que restringe permisos a nivel de cuenta completa, incluyendo al administrador. Una SCP en la OU aplica a todos los usuarios y roles de todas las cuentas hijas. La opción A es eludible por el admin. La opción C requiere intervención en cada usuario. Config detecta pero no previene.
+      </div>
+    </div>
+
+    <div class="iam-question" id="iam-q3">
+      <div class="iam-q-num">PREGUNTA 03 / 05</div>
+      <div class="iam-q-text">Un usuario IAM tiene una política adjunta que permite s3:GetObject en todos los buckets. Existe además una policy de bucket en S3 que explícitamente deniega s3:GetObject a ese usuario. ¿Cuál es el resultado cuando el usuario intenta leer un objeto?</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q3','wrong')"><span class="iam-opt-letter">A</span> Acceso permitido porque la política IAM del usuario tiene prioridad sobre la bucket policy</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q3','correct')"><span class="iam-opt-letter">B</span> Acceso denegado porque el Deny explícito en la bucket policy prevalece sobre el Allow</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q3','wrong')"><span class="iam-opt-letter">C</span> Acceso permitido porque las políticas IAM siempre superan las políticas de recursos</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q3','wrong')"><span class="iam-opt-letter">D</span> Depende del orden en que se evaluaron las políticas</div>
+      <div class="iam-explanation" id="iam-exp-q3">
+        <strong>Correcta: B.</strong> El Deny explícito siempre gana, sin importar el origen de la política (IAM, bucket policy, SCP). La lógica de evaluación de AWS es: 1) Deny explícito → acceso denegado. 2) Allow → acceso permitido. 3) Ningún Allow → Deny implícito. No existe prioridad por tipo de política.
+      </div>
+    </div>
+
+    <div class="iam-question" id="iam-q4">
+      <div class="iam-q-num">PREGUNTA 04 / 05</div>
+      <div class="iam-q-text">Una empresa quiere que sus empleados accedan a múltiples cuentas AWS usando sus credenciales corporativas de Active Directory, sin crear usuarios IAM individuales. ¿Qué solución es la más adecuada?</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q4','wrong')"><span class="iam-opt-letter">A</span> Crear usuarios IAM en cada cuenta y configurar federación SAML con AD directamente</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q4','wrong')"><span class="iam-opt-letter">B</span> Usar Amazon Cognito con User Pools conectado al AD corporativo</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q4','correct')"><span class="iam-opt-letter">C</span> Implementar AWS IAM Identity Center conectado al AD corporativo mediante AWS Directory Service</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q4','wrong')"><span class="iam-opt-letter">D</span> Compartir una IAM Role entre todas las cuentas usando cross-account access con STS</div>
+      <div class="iam-explanation" id="iam-exp-q4">
+        <strong>Correcta: C.</strong> IAM Identity Center (antes AWS SSO) está diseñado exactamente para este escenario: acceso centralizado a múltiples cuentas con identidades federadas desde AD. Cognito (B) es para usuarios de aplicaciones, no para acceso a la consola AWS. La opción A funciona pero es compleja y no escala bien a múltiples cuentas.
+      </div>
+    </div>
+
+    <div class="iam-question" id="iam-q5">
+      <div class="iam-q-num">PREGUNTA 05 / 05</div>
+      <div class="iam-q-text">Un equipo de desarrollo necesita poder crear roles IAM para sus aplicaciones, pero el equipo de seguridad quiere asegurarse de que esos roles nunca tengan más permisos que un conjunto definido. ¿Qué característica de IAM permite esto?</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q5','wrong')"><span class="iam-opt-letter">A</span> SCPs aplicadas a la cuenta del equipo de desarrollo</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q5','correct')"><span class="iam-opt-letter">B</span> IAM Permission Boundaries definidas por el equipo de seguridad y requeridas en los roles</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q5','wrong')"><span class="iam-opt-letter">C</span> Políticas IAM gestionadas por AWS (AWS Managed Policies)</div>
+      <div class="iam-option" onclick="iamAnswer(this,'iam-q5','wrong')"><span class="iam-opt-letter">D</span> IAM Access Analyzer para detectar permisos excesivos automáticamente</div>
+      <div class="iam-explanation" id="iam-exp-q5">
+        <strong>Correcta: B.</strong> Los Permission Boundaries definen el máximo de permisos que una entidad puede tener, independientemente de las políticas que se le adjunten. Permiten delegar la creación de roles a developers sin riesgo de escalada de privilegios. Las SCPs (A) aplican a cuentas completas. Access Analyzer (D) detecta pero no previene.
+      </div>
+    </div>
+
+  </div>
+
+</div><!-- /.iam-sheet -->
 
 <script>
-function answer(el, qId, result) {
+function iamAnswer(el, qId, result) {
   const q = document.getElementById(qId);
-  const opts = q.querySelectorAll('.option');
-  const exp = document.getElementById('exp-' + qId);
+  if (!q) return;
+  const opts = q.querySelectorAll('.iam-option');
+  const exp  = document.getElementById('iam-exp-' + qId.replace('iam-', ''));
   opts.forEach(o => {
     o.classList.add('revealed');
     o.removeAttribute('onclick');
@@ -627,17 +630,12 @@ function answer(el, qId, result) {
     exp.classList.add('show');
   } else {
     el.classList.add('wrong');
-    const correct = q.querySelector('[onclick*="correct"]') || [...opts].find(o => o.dataset && o.dataset.correct);
     opts.forEach(o => {
-      if (o.getAttribute('onclick') && o.getAttribute('onclick').includes('correct')) {
+      if (o.getAttribute('onclick') && o.getAttribute('onclick').includes("'correct'")) {
         o.classList.add('correct');
       }
     });
-    exp.classList.add('show');
-    exp.classList.add('wrong-exp');
+    exp.classList.add('show', 'wrong-exp');
   }
 }
 </script>
-
-</body>
-</html>

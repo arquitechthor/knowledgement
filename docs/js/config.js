@@ -354,7 +354,6 @@ const SITE_CONFIG = {
           file: "content/cloud-computing.html",
           children: [
             { title: "AWS",                                        file: "content/cloud-computing/aws.html" },
-            { title: "AWS — Enlaces",                              file: "content/cloud-computing/aws/enlaces.html" },
           ]
         },
         {
