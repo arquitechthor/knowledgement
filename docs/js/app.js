@@ -133,6 +133,16 @@ async function loadContent(filePath) {
     // Inyectar el fragmento HTML
     contentInner.innerHTML = html;
 
+    // Re-ejecutar scripts inline (innerHTML no los ejecuta automáticamente)
+    contentInner.querySelectorAll('script').forEach(oldScript => {
+      const newScript = document.createElement('script');
+      [...oldScript.attributes].forEach(attr =>
+        newScript.setAttribute(attr.name, attr.value)
+      );
+      newScript.textContent = oldScript.textContent;
+      oldScript.parentNode.replaceChild(newScript, oldScript);
+    });
+
     // Syntax highlighting en bloques de código
     contentInner.querySelectorAll('pre code').forEach(block => {
       hljs.highlightElement(block);
